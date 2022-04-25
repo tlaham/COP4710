@@ -31,10 +31,11 @@ C:\Users\trist\Documents\School\Spring22\Database\Project3\PSQLTest\bin\Debug\Sy
 C:\Users\trist\Documents\School\Spring22\Database\Project3\PSQLTest\bin\Debug\System.ValueTuple.xml
 C:\Users\trist\Documents\School\Spring22\Database\Project3\PSQLTest\obj\Debug\PSQLTest.csproj.AssemblyReference.cache
 C:\Users\trist\Documents\School\Spring22\Database\Project3\PSQLTest\obj\Debug\PSQLTest.csproj.SuggestedBindingRedirects.cache
-C:\Users\trist\Documents\School\Spring22\Database\Project3\PSQLTest\obj\Debug\PSQLTest.Form1.resources
 C:\Users\trist\Documents\School\Spring22\Database\Project3\PSQLTest\obj\Debug\PSQLTest.Properties.Resources.resources
 C:\Users\trist\Documents\School\Spring22\Database\Project3\PSQLTest\obj\Debug\PSQLTest.csproj.GenerateResource.cache
 C:\Users\trist\Documents\School\Spring22\Database\Project3\PSQLTest\obj\Debug\PSQLTest.csproj.CoreCompileInputs.cache
 C:\Users\trist\Documents\School\Spring22\Database\Project3\PSQLTest\obj\Debug\PSQLTest.csproj.CopyComplete
 C:\Users\trist\Documents\School\Spring22\Database\Project3\PSQLTest\obj\Debug\PSQLTest.exe
 C:\Users\trist\Documents\School\Spring22\Database\Project3\PSQLTest\obj\Debug\PSQLTest.pdb
+C:\Users\trist\Documents\School\Spring22\Database\Project3\PSQLTest\obj\Debug\PSQLTest.LoginPage.resources
+C:\Users\trist\Documents\School\Spring22\Database\Project3\PSQLTest\obj\Debug\PSQLTest.RegisterPage.resources

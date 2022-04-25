@@ -11,26 +11,11 @@ using Npgsql;
 
 namespace PSQLTest
 {
-    public partial class Form1 : Form
+    public partial class LoginPage : Form
     {
-        public Form1()
+        public LoginPage()
         {
             InitializeComponent();
-            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=cop4710;User Id=postgres;Password=spring99");
-            conn.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand();
-            cmd.Connection = conn;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from users";
-            NpgsqlDataReader dr = cmd.ExecuteReader();
-            if(dr.HasRows)
-            {
-                DataTable dt = new DataTable();
-                dt.Load(dr);
-                dataGridView1.DataSource = dt;
-            }
-            cmd.Dispose();
-            conn.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,7 +25,7 @@ namespace PSQLTest
             NpgsqlCommand cmd = new NpgsqlCommand();
             cmd.Connection = conn;
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"select u_id from users where u_name='{textBox1.Text}' and u_pswd='{textBox2.Text}'";
+            cmd.CommandText = $"select u_id from users where u_name='{unameBox.Text}' and u_pswd='{pswdBox.Text}'";
             NpgsqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
@@ -48,8 +33,19 @@ namespace PSQLTest
                 MainPage mp = new MainPage();
                 mp.Show();
             }
+            else
+            {
+                MessageBox.Show("Username and or Password do not exist", "Error", MessageBoxButtons.OK ,MessageBoxIcon.Error);
+            }
             cmd.Dispose();
             conn.Close();
+        }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegisterPage RP = new RegisterPage(this);
+            RP.Show();
         }
     }
 }
