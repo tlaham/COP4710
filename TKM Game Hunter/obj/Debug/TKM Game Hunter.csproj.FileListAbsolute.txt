@@ -98,3 +98,4 @@ C:\Users\trist\Documents\School\Spring22\Database\CurrRep\COP4710\TKM Game Hunte
 C:\Users\trist\Documents\School\Spring22\Database\CurrRep\COP4710\TKM Game Hunter\obj\Debug\TKM Game Hunter.csproj.CopyComplete
 C:\Users\trist\Documents\School\Spring22\Database\CurrRep\COP4710\TKM Game Hunter\obj\Debug\TKM Game Hunter.exe
 C:\Users\trist\Documents\School\Spring22\Database\CurrRep\COP4710\TKM Game Hunter\obj\Debug\TKM Game Hunter.pdb
+C:\Users\trist\Documents\School\Spring22\Database\CurrRep\COP4710\TKM Game Hunter\obj\Debug\TKM_Game_Hunter.GamesList.resources

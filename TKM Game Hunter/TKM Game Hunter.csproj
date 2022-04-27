@@ -103,6 +103,12 @@
     <Compile Include="GamePage.Designer.cs">
       <DependentUpon>GamePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="GamesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GamesList.Designer.cs">
+      <DependentUpon>GamesList.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GamePage.resx">
       <DependentUpon>GamePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GamesList.resx">
+      <DependentUpon>GamesList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
@@ -183,6 +192,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Lego_Star_Wars_The_Skywalker_Saga.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

@@ -52,5 +52,12 @@ namespace TKM_Game_Hunter
             PP.Show();
             this.Hide();
         }
+
+        private void btn_editgames_Click(object sender, EventArgs e)
+        {
+            GamesList GL = new GamesList();
+            GL.Show();
+            this.Hide();
+        }
     }
 }

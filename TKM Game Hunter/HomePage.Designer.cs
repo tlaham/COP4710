@@ -56,6 +56,7 @@ namespace TKM_Game_Hunter
             this.txtbx_review4 = new System.Windows.Forms.TextBox();
             this.lbl_welcome = new System.Windows.Forms.Label();
             this.tooltip_profile = new System.Windows.Forms.ToolTip(this.components);
+            this.btn_editgames = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -325,6 +326,17 @@ namespace TKM_Game_Hunter
             // 
             this.tooltip_profile.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
+            // btn_editgames
+            // 
+            this.btn_editgames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editgames.Location = new System.Drawing.Point(460, 17);
+            this.btn_editgames.Name = "btn_editgames";
+            this.btn_editgames.Size = new System.Drawing.Size(75, 75);
+            this.btn_editgames.TabIndex = 34;
+            this.btn_editgames.Text = "Edit\r\nGames";
+            this.btn_editgames.UseVisualStyleBackColor = true;
+            this.btn_editgames.Click += new System.EventHandler(this.btn_editgames_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,6 +344,7 @@ namespace TKM_Game_Hunter
             this.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.VecteezyWhite_Background_02RD0421_rev_01_generated;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_editgames);
             this.Controls.Add(this.lbl_welcome);
             this.Controls.Add(this.txtbx_review4);
             this.Controls.Add(this.txtbx_review3);
@@ -395,5 +408,6 @@ namespace TKM_Game_Hunter
         private System.Windows.Forms.TextBox txtbx_review4;
         private System.Windows.Forms.Label lbl_welcome;
         private System.Windows.Forms.ToolTip tooltip_profile;
+        private System.Windows.Forms.Button btn_editgames;
     }
 }
