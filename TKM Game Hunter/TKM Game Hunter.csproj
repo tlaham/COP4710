@@ -194,7 +194,6 @@
     <None Include="Resources\star.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Ghost_of_Tsushima_cover.jpg" />
     <Content Include="Resources\Lego_Star_Wars_The_Skywalker_Saga.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
