@@ -21,10 +21,10 @@ namespace TKM_Game_Hunter
         {
             InitializeComponent();
             this.username = username;
-            lbl_user.Text = GetInfo(username, ACC_Col.username);
-            lbl_age.Text = GetInfo(username, ACC_Col.age);
-            lbl_email.Text = GetInfo(username, ACC_Col.email);
-            lbl_utype.Text = GetInfo(username, ACC_Col.u_type);
+            lbl_user.Text = $"Username: {GetInfo(username, ACC_Col.username)}";
+            lbl_age.Text = $"Age: {GetInfo(username, ACC_Col.age)}";
+            lbl_email.Text = $"Email: {GetInfo(username, ACC_Col.email)}";
+            lbl_utype.Text = $"User Type: {GetInfo(username, ACC_Col.u_type)}";
             try
             {
                 pictureBox1.BackgroundImage = Image.FromFile(GetInfo(username, ACC_Col.profilepic));
