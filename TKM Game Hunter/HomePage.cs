@@ -12,9 +12,11 @@ namespace TKM_Game_Hunter
 {
     public partial class HomePage : Form
     {
+        string username;
         public HomePage(string username)
         {
             InitializeComponent();
+            this.username = username;
             lbl_welcome.Text = $"Welcome {username}";
             tooltip_profile.SetToolTip(profilepic, "Click to access profile");
         }
@@ -42,6 +44,13 @@ namespace TKM_Game_Hunter
         private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
 
+        }
+
+        private void profilepic_Click(object sender, EventArgs e)
+        {
+            ProfilePage PP = new ProfilePage(username);
+            PP.Show();
+            this.Hide();
         }
     }
 }

@@ -80,6 +80,7 @@ namespace TKM_Game_Hunter
             this.profilepic.Size = new System.Drawing.Size(39, 38);
             this.profilepic.TabIndex = 8;
             this.profilepic.TabStop = false;
+            this.profilepic.Click += new System.EventHandler(this.profilepic_Click);
             // 
             // lbl_price1
             // 

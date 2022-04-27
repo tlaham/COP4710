@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
+using static TKM_Game_Hunter.Resources;
 
 namespace TKM_Game_Hunter
 {
@@ -81,6 +82,7 @@ namespace TKM_Game_Hunter
                     conn2.Open();
                     cmd = new NpgsqlCommand($"insert into account (username, password, email, dob, u_type) values ('{txtbx_username.Text}','{txtbx_password.Text}','{txtbx_email.Text}','{dob_picker.Text}','{cmbobx_usertype.Text}')", conn2);
                     cmd.ExecuteNonQueryAsync();
+                    CalcAge($"{txtbx_username.Text}");
                     lp.Show();
                     this.Hide();
                 }

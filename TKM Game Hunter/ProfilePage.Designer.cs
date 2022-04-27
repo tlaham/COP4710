@@ -31,7 +31,10 @@ namespace TKM_Game_Hunter
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_user = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_email = new System.Windows.Forms.Label();
+            this.lbl_age = new System.Windows.Forms.Label();
+            this.lbl_utype = new System.Windows.Forms.Label();
+            this.but_ppic = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,29 +51,65 @@ namespace TKM_Game_Hunter
             this.lbl_user.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_user.AutoSize = true;
             this.lbl_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_user.Location = new System.Drawing.Point(315, 146);
+            this.lbl_user.Location = new System.Drawing.Point(330, 140);
             this.lbl_user.Name = "lbl_user";
             this.lbl_user.Size = new System.Drawing.Size(130, 25);
             this.lbl_user.TabIndex = 1;
             this.lbl_user.Text = "Username:()";
+            this.lbl_user.Click += new System.EventHandler(this.lbl_user_Click);
             // 
-            // label1
+            // lbl_email
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(330, 202);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Email: ()";
+            this.lbl_email.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_email.Location = new System.Drawing.Point(330, 252);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(91, 25);
+            this.lbl_email.TabIndex = 2;
+            this.lbl_email.Text = "Email: ()";
+            // 
+            // lbl_age
+            // 
+            this.lbl_age.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_age.AutoSize = true;
+            this.lbl_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_age.Location = new System.Drawing.Point(330, 196);
+            this.lbl_age.Name = "lbl_age";
+            this.lbl_age.Size = new System.Drawing.Size(76, 25);
+            this.lbl_age.TabIndex = 3;
+            this.lbl_age.Text = "Age: ()";
+            // 
+            // lbl_utype
+            // 
+            this.lbl_utype.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_utype.AutoSize = true;
+            this.lbl_utype.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_utype.Location = new System.Drawing.Point(330, 307);
+            this.lbl_utype.Name = "lbl_utype";
+            this.lbl_utype.Size = new System.Drawing.Size(131, 25);
+            this.lbl_utype.TabIndex = 4;
+            this.lbl_utype.Text = "UserType: ()";
+            // 
+            // but_ppic
+            // 
+            this.but_ppic.Location = new System.Drawing.Point(441, 89);
+            this.but_ppic.Name = "but_ppic";
+            this.but_ppic.Size = new System.Drawing.Size(109, 23);
+            this.but_ppic.TabIndex = 5;
+            this.but_ppic.Text = "Upload Photo";
+            this.but_ppic.UseVisualStyleBackColor = true;
+            this.but_ppic.Click += new System.EventHandler(this.but_ppic_Click);
             // 
             // ProfilePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.but_ppic);
+            this.Controls.Add(this.lbl_utype);
+            this.Controls.Add(this.lbl_age);
+            this.Controls.Add(this.lbl_email);
             this.Controls.Add(this.lbl_user);
             this.Controls.Add(this.pictureBox1);
             this.Name = "ProfilePage";
@@ -85,6 +124,9 @@ namespace TKM_Game_Hunter
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_user;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_email;
+        private System.Windows.Forms.Label lbl_age;
+        private System.Windows.Forms.Label lbl_utype;
+        private System.Windows.Forms.Button but_ppic;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
+using static TKM_Game_Hunter.Resources;
 
 namespace TKM_Game_Hunter
 {
@@ -20,6 +22,7 @@ namespace TKM_Game_Hunter
         public LoginPage()
         {
             InitializeComponent();
+
         }
 
         private void txtbx_username_TextChanged(object sender, EventArgs e)

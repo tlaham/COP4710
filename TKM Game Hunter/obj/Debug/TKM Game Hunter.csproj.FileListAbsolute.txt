@@ -54,3 +54,4 @@ C:\Users\trist\Documents\School\Spring22\Database\Project3\TKM Game Hunter\bin\D
 C:\Users\trist\Documents\School\Spring22\Database\Project3\TKM Game Hunter\bin\Debug\System.ValueTuple.xml
 C:\Users\trist\Documents\School\Spring22\Database\Project3\TKM Game Hunter\obj\Debug\TKM Game Hunter.csproj.CopyComplete
 C:\Users\trist\Documents\School\Spring22\Database\Project3\TKM Game Hunter\obj\Debug\TKM_Game_Hunter.ProfilePage.resources
+C:\Users\trist\Documents\School\Spring22\Database\Project3\TKM Game Hunter\obj\Debug\TKM Game Hunter.csproj.AssemblyReference.cache
