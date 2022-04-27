@@ -30,7 +30,7 @@ namespace TKM_Game_Hunter
                 pictureBox1.BackgroundImage = Image.FromFile(GetInfo(username, ACC_Col.profilepic));
                 pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                    
             }

@@ -35,7 +35,7 @@
             this.lbl_genre = new System.Windows.Forms.Label();
             this.txtbx_price = new System.Windows.Forms.TextBox();
             this.lbl_price = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbx_company = new System.Windows.Forms.TextBox();
             this.lbl_company = new System.Windows.Forms.Label();
             this.txtbx_platform = new System.Windows.Forms.TextBox();
             this.lbl_platform = new System.Windows.Forms.Label();
@@ -44,6 +44,8 @@
             this.but_update = new System.Windows.Forms.Button();
             this.but_delete = new System.Windows.Forms.Button();
             this.pbx_splash = new System.Windows.Forms.PictureBox();
+            this.but_save = new System.Windows.Forms.Button();
+            this.but_browse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_games)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_splash)).BeginInit();
             this.SuspendLayout();
@@ -118,13 +120,13 @@
             this.lbl_price.TabIndex = 5;
             this.lbl_price.Text = "Price";
             // 
-            // textBox1
+            // txtbx_company
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(122, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 26);
-            this.textBox1.TabIndex = 8;
+            this.txtbx_company.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_company.Location = new System.Drawing.Point(122, 103);
+            this.txtbx_company.Name = "txtbx_company";
+            this.txtbx_company.Size = new System.Drawing.Size(226, 26);
+            this.txtbx_company.TabIndex = 8;
             // 
             // lbl_company
             // 
@@ -173,6 +175,7 @@
             this.but_insert.TabIndex = 13;
             this.but_insert.Text = "Insert";
             this.but_insert.UseVisualStyleBackColor = true;
+            this.but_insert.Click += new System.EventHandler(this.but_insert_Click);
             // 
             // but_update
             // 
@@ -183,6 +186,7 @@
             this.but_update.TabIndex = 14;
             this.but_update.Text = "Update";
             this.but_update.UseVisualStyleBackColor = true;
+            this.but_update.Click += new System.EventHandler(this.but_update_Click);
             // 
             // but_delete
             // 
@@ -193,6 +197,7 @@
             this.but_delete.TabIndex = 15;
             this.but_delete.Text = "Delete";
             this.but_delete.UseVisualStyleBackColor = true;
+            this.but_delete.Click += new System.EventHandler(this.but_delete_Click);
             // 
             // pbx_splash
             // 
@@ -202,11 +207,35 @@
             this.pbx_splash.TabIndex = 16;
             this.pbx_splash.TabStop = false;
             // 
+            // but_save
+            // 
+            this.but_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_save.Location = new System.Drawing.Point(698, 90);
+            this.but_save.Name = "but_save";
+            this.but_save.Size = new System.Drawing.Size(75, 75);
+            this.but_save.TabIndex = 17;
+            this.but_save.Text = "Save";
+            this.but_save.UseVisualStyleBackColor = true;
+            this.but_save.Click += new System.EventHandler(this.but_save_Click);
+            // 
+            // but_browse
+            // 
+            this.but_browse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_browse.Location = new System.Drawing.Point(358, 36);
+            this.but_browse.Name = "but_browse";
+            this.but_browse.Size = new System.Drawing.Size(75, 29);
+            this.but_browse.TabIndex = 18;
+            this.but_browse.Text = "Browse";
+            this.but_browse.UseVisualStyleBackColor = true;
+            this.but_browse.Click += new System.EventHandler(this.but_browse_Click);
+            // 
             // GamesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(866, 450);
+            this.Controls.Add(this.but_browse);
+            this.Controls.Add(this.but_save);
             this.Controls.Add(this.pbx_splash);
             this.Controls.Add(this.but_delete);
             this.Controls.Add(this.but_update);
@@ -214,7 +243,7 @@
             this.Controls.Add(this.lbl_splashart);
             this.Controls.Add(this.txtbx_platform);
             this.Controls.Add(this.lbl_platform);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtbx_company);
             this.Controls.Add(this.lbl_company);
             this.Controls.Add(this.txtbx_price);
             this.Controls.Add(this.lbl_price);
@@ -243,7 +272,7 @@
         private System.Windows.Forms.Label lbl_genre;
         private System.Windows.Forms.TextBox txtbx_price;
         private System.Windows.Forms.Label lbl_price;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbx_company;
         private System.Windows.Forms.Label lbl_company;
         private System.Windows.Forms.TextBox txtbx_platform;
         private System.Windows.Forms.Label lbl_platform;
@@ -252,5 +281,7 @@
         private System.Windows.Forms.Button but_update;
         private System.Windows.Forms.Button but_delete;
         private System.Windows.Forms.PictureBox pbx_splash;
+        private System.Windows.Forms.Button but_save;
+        private System.Windows.Forms.Button but_browse;
     }
 }
