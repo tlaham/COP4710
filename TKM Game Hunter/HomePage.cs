@@ -59,5 +59,12 @@ namespace TKM_Game_Hunter
             GL.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GamePage gp = new GamePage(1, username);
+            gp.Show();
+        }
     }
 }

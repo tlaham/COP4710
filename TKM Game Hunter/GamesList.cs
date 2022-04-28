@@ -46,5 +46,10 @@ namespace TKM_Game_Hunter
                 pbx_splash.BackgroundImageLayout = ImageLayout.Stretch;
             }
         }
+
+        private void pbx_splash_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

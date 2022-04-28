@@ -123,6 +123,16 @@ namespace TKM_Game_Hunter.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap star__1_ {
+            get {
+                object obj = ResourceManager.GetObject("star (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap VecteezyWhite_Background_02RD0421_rev_01_generated {
             get {
                 object obj = ResourceManager.GetObject("VecteezyWhite-Background-02RD0421-rev-01_generated", resourceCulture);

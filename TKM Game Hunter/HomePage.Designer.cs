@@ -57,6 +57,7 @@ namespace TKM_Game_Hunter
             this.lbl_welcome = new System.Windows.Forms.Label();
             this.tooltip_profile = new System.Windows.Forms.ToolTip(this.components);
             this.btn_editgames = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +68,7 @@ namespace TKM_Game_Hunter
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
             this.label1.Location = new System.Drawing.Point(12, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 22);
+            this.label1.Size = new System.Drawing.Size(213, 29);
             this.label1.TabIndex = 9;
             this.label1.Text = "TKM Game Hunter";
             // 
@@ -90,7 +91,7 @@ namespace TKM_Game_Hunter
             this.lbl_price1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lbl_price1.Location = new System.Drawing.Point(78, 166);
             this.lbl_price1.Name = "lbl_price1";
-            this.lbl_price1.Size = new System.Drawing.Size(82, 17);
+            this.lbl_price1.Size = new System.Drawing.Size(98, 20);
             this.lbl_price1.TabIndex = 13;
             this.lbl_price1.Text = "Game Price";
             // 
@@ -101,7 +102,7 @@ namespace TKM_Game_Hunter
             this.lbl_game1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbl_game1.Location = new System.Drawing.Point(77, 130);
             this.lbl_game1.Name = "lbl_game1";
-            this.lbl_game1.Size = new System.Drawing.Size(99, 20);
+            this.lbl_game1.Size = new System.Drawing.Size(122, 25);
             this.lbl_game1.TabIndex = 12;
             this.lbl_game1.Text = "Game Name";
             // 
@@ -112,7 +113,7 @@ namespace TKM_Game_Hunter
             this.lbl_price2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lbl_price2.Location = new System.Drawing.Point(256, 166);
             this.lbl_price2.Name = "lbl_price2";
-            this.lbl_price2.Size = new System.Drawing.Size(82, 17);
+            this.lbl_price2.Size = new System.Drawing.Size(98, 20);
             this.lbl_price2.TabIndex = 15;
             this.lbl_price2.Text = "Game Price";
             // 
@@ -123,7 +124,7 @@ namespace TKM_Game_Hunter
             this.lbl_game2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbl_game2.Location = new System.Drawing.Point(255, 130);
             this.lbl_game2.Name = "lbl_game2";
-            this.lbl_game2.Size = new System.Drawing.Size(99, 20);
+            this.lbl_game2.Size = new System.Drawing.Size(122, 25);
             this.lbl_game2.TabIndex = 14;
             this.lbl_game2.Text = "Game Name";
             // 
@@ -134,7 +135,7 @@ namespace TKM_Game_Hunter
             this.lbl_price4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lbl_price4.Location = new System.Drawing.Point(615, 166);
             this.lbl_price4.Name = "lbl_price4";
-            this.lbl_price4.Size = new System.Drawing.Size(82, 17);
+            this.lbl_price4.Size = new System.Drawing.Size(98, 20);
             this.lbl_price4.TabIndex = 19;
             this.lbl_price4.Text = "Game Price";
             // 
@@ -145,7 +146,7 @@ namespace TKM_Game_Hunter
             this.lbl_game4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbl_game4.Location = new System.Drawing.Point(614, 130);
             this.lbl_game4.Name = "lbl_game4";
-            this.lbl_game4.Size = new System.Drawing.Size(99, 20);
+            this.lbl_game4.Size = new System.Drawing.Size(122, 25);
             this.lbl_game4.TabIndex = 18;
             this.lbl_game4.Text = "Game Name";
             // 
@@ -156,7 +157,7 @@ namespace TKM_Game_Hunter
             this.lbl_price3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lbl_price3.Location = new System.Drawing.Point(437, 166);
             this.lbl_price3.Name = "lbl_price3";
-            this.lbl_price3.Size = new System.Drawing.Size(82, 17);
+            this.lbl_price3.Size = new System.Drawing.Size(98, 20);
             this.lbl_price3.TabIndex = 17;
             this.lbl_price3.Text = "Game Price";
             // 
@@ -167,7 +168,7 @@ namespace TKM_Game_Hunter
             this.lbl_game3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbl_game3.Location = new System.Drawing.Point(436, 130);
             this.lbl_game3.Name = "lbl_game3";
-            this.lbl_game3.Size = new System.Drawing.Size(99, 20);
+            this.lbl_game3.Size = new System.Drawing.Size(122, 25);
             this.lbl_game3.TabIndex = 16;
             this.lbl_game3.Text = "Game Name";
             // 
@@ -178,7 +179,7 @@ namespace TKM_Game_Hunter
             this.lbl_popGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lbl_popGames.Location = new System.Drawing.Point(59, 82);
             this.lbl_popGames.Name = "lbl_popGames";
-            this.lbl_popGames.Size = new System.Drawing.Size(147, 25);
+            this.lbl_popGames.Size = new System.Drawing.Size(189, 29);
             this.lbl_popGames.TabIndex = 20;
             this.lbl_popGames.Text = "Popular Games";
             // 
@@ -189,7 +190,7 @@ namespace TKM_Game_Hunter
             this.lbl_myReviews.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lbl_myReviews.Location = new System.Drawing.Point(59, 250);
             this.lbl_myReviews.Name = "lbl_myReviews";
-            this.lbl_myReviews.Size = new System.Drawing.Size(117, 25);
+            this.lbl_myReviews.Size = new System.Drawing.Size(150, 29);
             this.lbl_myReviews.TabIndex = 21;
             this.lbl_myReviews.Text = "My Reviews";
             // 
@@ -200,7 +201,7 @@ namespace TKM_Game_Hunter
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label2.Location = new System.Drawing.Point(615, 346);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 17);
+            this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 29;
             // 
             // lbl_game8
@@ -210,7 +211,7 @@ namespace TKM_Game_Hunter
             this.lbl_game8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbl_game8.Location = new System.Drawing.Point(614, 310);
             this.lbl_game8.Name = "lbl_game8";
-            this.lbl_game8.Size = new System.Drawing.Size(99, 20);
+            this.lbl_game8.Size = new System.Drawing.Size(122, 25);
             this.lbl_game8.TabIndex = 28;
             this.lbl_game8.Text = "Game Name";
             // 
@@ -221,7 +222,7 @@ namespace TKM_Game_Hunter
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label4.Location = new System.Drawing.Point(437, 346);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 17);
+            this.label4.Size = new System.Drawing.Size(0, 20);
             this.label4.TabIndex = 27;
             // 
             // lbl_game7
@@ -231,7 +232,7 @@ namespace TKM_Game_Hunter
             this.lbl_game7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbl_game7.Location = new System.Drawing.Point(436, 310);
             this.lbl_game7.Name = "lbl_game7";
-            this.lbl_game7.Size = new System.Drawing.Size(99, 20);
+            this.lbl_game7.Size = new System.Drawing.Size(122, 25);
             this.lbl_game7.TabIndex = 26;
             this.lbl_game7.Text = "Game Name";
             // 
@@ -242,7 +243,7 @@ namespace TKM_Game_Hunter
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label6.Location = new System.Drawing.Point(256, 346);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 17);
+            this.label6.Size = new System.Drawing.Size(0, 20);
             this.label6.TabIndex = 25;
             // 
             // lbl_game6
@@ -252,7 +253,7 @@ namespace TKM_Game_Hunter
             this.lbl_game6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbl_game6.Location = new System.Drawing.Point(255, 310);
             this.lbl_game6.Name = "lbl_game6";
-            this.lbl_game6.Size = new System.Drawing.Size(99, 20);
+            this.lbl_game6.Size = new System.Drawing.Size(122, 25);
             this.lbl_game6.TabIndex = 24;
             this.lbl_game6.Text = "Game Name";
             // 
@@ -263,7 +264,7 @@ namespace TKM_Game_Hunter
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label8.Location = new System.Drawing.Point(78, 346);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 17);
+            this.label8.Size = new System.Drawing.Size(0, 20);
             this.label8.TabIndex = 23;
             // 
             // lbl_game5
@@ -273,7 +274,7 @@ namespace TKM_Game_Hunter
             this.lbl_game5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbl_game5.Location = new System.Drawing.Point(77, 310);
             this.lbl_game5.Name = "lbl_game5";
-            this.lbl_game5.Size = new System.Drawing.Size(99, 20);
+            this.lbl_game5.Size = new System.Drawing.Size(122, 25);
             this.lbl_game5.TabIndex = 22;
             this.lbl_game5.Text = "Game Name";
             // 
@@ -317,7 +318,7 @@ namespace TKM_Game_Hunter
             this.lbl_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
             this.lbl_welcome.Location = new System.Drawing.Point(277, 17);
             this.lbl_welcome.Name = "lbl_welcome";
-            this.lbl_welcome.Size = new System.Drawing.Size(134, 22);
+            this.lbl_welcome.Size = new System.Drawing.Size(181, 29);
             this.lbl_welcome.TabIndex = 33;
             this.lbl_welcome.Text = "Welcome Blank";
             this.lbl_welcome.Click += new System.EventHandler(this.lbl_welcome_Click);
@@ -337,6 +338,16 @@ namespace TKM_Game_Hunter
             this.btn_editgames.UseVisualStyleBackColor = true;
             this.btn_editgames.Click += new System.EventHandler(this.btn_editgames_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(583, 31);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,6 +355,7 @@ namespace TKM_Game_Hunter
             this.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.VecteezyWhite_Background_02RD0421_rev_01_generated;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_editgames);
             this.Controls.Add(this.lbl_welcome);
             this.Controls.Add(this.txtbx_review4);
@@ -409,5 +421,6 @@ namespace TKM_Game_Hunter
         private System.Windows.Forms.Label lbl_welcome;
         private System.Windows.Forms.ToolTip tooltip_profile;
         private System.Windows.Forms.Button btn_editgames;
+        private System.Windows.Forms.Button button1;
     }
 }

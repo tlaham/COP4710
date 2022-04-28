@@ -102,6 +102,11 @@ namespace TKM_Game_Hunter
             Application.Exit();
         }
 
+        private void txtbx_pswdconfirm_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void CreateAccountPage_Load(object sender, EventArgs e)
         {
 
