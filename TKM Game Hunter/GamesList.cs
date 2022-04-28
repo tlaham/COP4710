@@ -192,5 +192,10 @@ namespace TKM_Game_Hunter
         {
             HP.Show();
         }
+
+        private void txtbx_title_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

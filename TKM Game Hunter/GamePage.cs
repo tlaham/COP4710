@@ -91,8 +91,8 @@ namespace TKM_Game_Hunter
         private void picbx_profile_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ProfilePage pp = new ProfilePage(username);
-            pp.ShowDialog();
+            //ProfilePage pp = new ProfilePage(username);
+            //pp.ShowDialog();
             this.Close();
         }
         private void btn_review_Click(object sender, EventArgs e)

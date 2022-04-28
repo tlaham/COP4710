@@ -130,6 +130,12 @@
     <Compile Include="ProfilePage.Designer.cs">
       <DependentUpon>ProfilePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="WriteReviewPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WriteReviewPage.Designer.cs">
+      <DependentUpon>WriteReviewPage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CreateAccountPage.resx">
       <DependentUpon>CreateAccountPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +163,9 @@
     </Compile>
     <EmbeddedResource Include="ProfilePage.resx">
       <DependentUpon>ProfilePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WriteReviewPage.resx">
+      <DependentUpon>WriteReviewPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

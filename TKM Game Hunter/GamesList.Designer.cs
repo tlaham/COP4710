@@ -63,6 +63,7 @@
             this.dgv_games.MultiSelect = false;
             this.dgv_games.Name = "dgv_games";
             this.dgv_games.ReadOnly = true;
+            this.dgv_games.RowHeadersWidth = 51;
             this.dgv_games.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_games.Size = new System.Drawing.Size(842, 231);
             this.dgv_games.TabIndex = 0;
@@ -74,7 +75,7 @@
             this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title.Location = new System.Drawing.Point(8, 50);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(50, 24);
+            this.lbl_title.Size = new System.Drawing.Size(67, 29);
             this.lbl_title.TabIndex = 1;
             this.lbl_title.Text = "Title:";
             // 
@@ -83,15 +84,16 @@
             this.txtbx_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbx_title.Location = new System.Drawing.Point(118, 48);
             this.txtbx_title.Name = "txtbx_title";
-            this.txtbx_title.Size = new System.Drawing.Size(226, 26);
+            this.txtbx_title.Size = new System.Drawing.Size(226, 30);
             this.txtbx_title.TabIndex = 2;
+            this.txtbx_title.TextChanged += new System.EventHandler(this.txtbx_title_TextChanged);
             // 
             // txtbx_genre
             // 
             this.txtbx_genre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbx_genre.Location = new System.Drawing.Point(118, 80);
             this.txtbx_genre.Name = "txtbx_genre";
-            this.txtbx_genre.Size = new System.Drawing.Size(226, 26);
+            this.txtbx_genre.Size = new System.Drawing.Size(226, 30);
             this.txtbx_genre.TabIndex = 4;
             // 
             // lbl_genre
@@ -100,7 +102,7 @@
             this.lbl_genre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_genre.Location = new System.Drawing.Point(8, 82);
             this.lbl_genre.Name = "lbl_genre";
-            this.lbl_genre.Size = new System.Drawing.Size(68, 24);
+            this.lbl_genre.Size = new System.Drawing.Size(86, 29);
             this.lbl_genre.TabIndex = 3;
             this.lbl_genre.Text = "Genre:";
             // 
@@ -109,7 +111,7 @@
             this.txtbx_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbx_price.Location = new System.Drawing.Point(118, 112);
             this.txtbx_price.Name = "txtbx_price";
-            this.txtbx_price.Size = new System.Drawing.Size(226, 26);
+            this.txtbx_price.Size = new System.Drawing.Size(226, 30);
             this.txtbx_price.TabIndex = 6;
             // 
             // lbl_price
@@ -118,7 +120,7 @@
             this.lbl_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_price.Location = new System.Drawing.Point(8, 114);
             this.lbl_price.Name = "lbl_price";
-            this.lbl_price.Size = new System.Drawing.Size(53, 24);
+            this.lbl_price.Size = new System.Drawing.Size(69, 29);
             this.lbl_price.TabIndex = 5;
             this.lbl_price.Text = "Price";
             // 
@@ -127,7 +129,7 @@
             this.txtbx_company.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbx_company.Location = new System.Drawing.Point(118, 144);
             this.txtbx_company.Name = "txtbx_company";
-            this.txtbx_company.Size = new System.Drawing.Size(226, 26);
+            this.txtbx_company.Size = new System.Drawing.Size(226, 30);
             this.txtbx_company.TabIndex = 8;
             // 
             // lbl_company
@@ -136,7 +138,7 @@
             this.lbl_company.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_company.Location = new System.Drawing.Point(8, 146);
             this.lbl_company.Name = "lbl_company";
-            this.lbl_company.Size = new System.Drawing.Size(96, 24);
+            this.lbl_company.Size = new System.Drawing.Size(121, 29);
             this.lbl_company.TabIndex = 7;
             this.lbl_company.Text = "Company:";
             // 
@@ -145,7 +147,7 @@
             this.txtbx_platform.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbx_platform.Location = new System.Drawing.Point(118, 180);
             this.txtbx_platform.Name = "txtbx_platform";
-            this.txtbx_platform.Size = new System.Drawing.Size(226, 26);
+            this.txtbx_platform.Size = new System.Drawing.Size(226, 30);
             this.txtbx_platform.TabIndex = 10;
             // 
             // lbl_platform
@@ -154,7 +156,7 @@
             this.lbl_platform.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_platform.Location = new System.Drawing.Point(8, 180);
             this.lbl_platform.Name = "lbl_platform";
-            this.lbl_platform.Size = new System.Drawing.Size(82, 24);
+            this.lbl_platform.Size = new System.Drawing.Size(108, 29);
             this.lbl_platform.TabIndex = 9;
             this.lbl_platform.Text = "Platform:";
             // 
@@ -164,7 +166,7 @@
             this.lbl_splashart.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_splashart.Location = new System.Drawing.Point(350, 146);
             this.lbl_splashart.Name = "lbl_splashart";
-            this.lbl_splashart.Size = new System.Drawing.Size(92, 24);
+            this.lbl_splashart.Size = new System.Drawing.Size(120, 29);
             this.lbl_splashart.TabIndex = 11;
             this.lbl_splashart.Text = "Splashart:";
             // 
