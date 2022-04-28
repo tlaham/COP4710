@@ -37,6 +37,7 @@ namespace TKM_Game_Hunter
             this.lbl_utype = new System.Windows.Forms.Label();
             this.but_ppic = new System.Windows.Forms.Button();
             this.but_home = new System.Windows.Forms.Button();
+            this.lbl_reviews = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,8 +53,9 @@ namespace TKM_Game_Hunter
             // 
             this.lbl_user.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_user.AutoSize = true;
+            this.lbl_user.BackColor = System.Drawing.Color.Transparent;
             this.lbl_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_user.Location = new System.Drawing.Point(330, 140);
+            this.lbl_user.Location = new System.Drawing.Point(330, 184);
             this.lbl_user.Name = "lbl_user";
             this.lbl_user.Size = new System.Drawing.Size(130, 25);
             this.lbl_user.TabIndex = 1;
@@ -64,8 +66,9 @@ namespace TKM_Game_Hunter
             // 
             this.lbl_email.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_email.AutoSize = true;
+            this.lbl_email.BackColor = System.Drawing.Color.Transparent;
             this.lbl_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_email.Location = new System.Drawing.Point(330, 252);
+            this.lbl_email.Location = new System.Drawing.Point(330, 296);
             this.lbl_email.Name = "lbl_email";
             this.lbl_email.Size = new System.Drawing.Size(91, 25);
             this.lbl_email.TabIndex = 2;
@@ -75,8 +78,9 @@ namespace TKM_Game_Hunter
             // 
             this.lbl_age.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_age.AutoSize = true;
+            this.lbl_age.BackColor = System.Drawing.Color.Transparent;
             this.lbl_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_age.Location = new System.Drawing.Point(330, 196);
+            this.lbl_age.Location = new System.Drawing.Point(330, 240);
             this.lbl_age.Name = "lbl_age";
             this.lbl_age.Size = new System.Drawing.Size(76, 25);
             this.lbl_age.TabIndex = 3;
@@ -86,8 +90,9 @@ namespace TKM_Game_Hunter
             // 
             this.lbl_utype.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_utype.AutoSize = true;
+            this.lbl_utype.BackColor = System.Drawing.Color.Transparent;
             this.lbl_utype.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_utype.Location = new System.Drawing.Point(330, 307);
+            this.lbl_utype.Location = new System.Drawing.Point(330, 351);
             this.lbl_utype.Name = "lbl_utype";
             this.lbl_utype.Size = new System.Drawing.Size(131, 25);
             this.lbl_utype.TabIndex = 4;
@@ -95,7 +100,7 @@ namespace TKM_Game_Hunter
             // 
             // but_ppic
             // 
-            this.but_ppic.Location = new System.Drawing.Point(441, 89);
+            this.but_ppic.Location = new System.Drawing.Point(335, 118);
             this.but_ppic.Name = "but_ppic";
             this.but_ppic.Size = new System.Drawing.Size(109, 23);
             this.but_ppic.TabIndex = 5;
@@ -115,12 +120,25 @@ namespace TKM_Game_Hunter
             this.but_home.UseVisualStyleBackColor = true;
             this.but_home.Click += new System.EventHandler(this.but_home_Click);
             // 
+            // lbl_reviews
+            // 
+            this.lbl_reviews.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_reviews.AutoSize = true;
+            this.lbl_reviews.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_reviews.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_reviews.Location = new System.Drawing.Point(330, 400);
+            this.lbl_reviews.Name = "lbl_reviews";
+            this.lbl_reviews.Size = new System.Drawing.Size(281, 25);
+            this.lbl_reviews.TabIndex = 21;
+            this.lbl_reviews.Text = "Number of Review Written:()";
+            // 
             // ProfilePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.VecteezyWhite_Background_02RD0421_rev_01_generated;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_reviews);
             this.Controls.Add(this.but_home);
             this.Controls.Add(this.but_ppic);
             this.Controls.Add(this.lbl_utype);
@@ -149,5 +167,6 @@ namespace TKM_Game_Hunter
         private System.Windows.Forms.Label lbl_utype;
         private System.Windows.Forms.Button but_ppic;
         private System.Windows.Forms.Button but_home;
+        private System.Windows.Forms.Label lbl_reviews;
     }
 }

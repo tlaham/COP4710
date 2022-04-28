@@ -27,6 +27,7 @@ namespace TKM_Game_Hunter
             lbl_age.Text = $"Age: {GetInfo(username, ACC_Col.age)}";
             lbl_email.Text = $"Email: {GetInfo(username, ACC_Col.email)}";
             lbl_utype.Text = $"User Type: {GetInfo(username, ACC_Col.u_type)}";
+            lbl_reviews.Text = $"Number of Reviews Writen: {CalcReviews(username)}";
             try
             {
                 pictureBox1.BackgroundImage = Image.FromFile(GetInfo(username, ACC_Col.profilepic));

@@ -54,5 +54,16 @@ namespace TKM_Game_Hunter
             cmd.ExecuteNonQueryAsync();
             
         }
+
+        public static string CalcReviews(string username)
+        {
+            NpgsqlConnection conn = new NpgsqlConnection(CONSTRING);
+            conn.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand($"select count(*) from review where username = '{username}'",conn);
+            NpgsqlDataReader NDR;
+            NDR=cmd.ExecuteReader();
+            NDR.Read();
+            return NDR.GetValue(0).ToString();
+        }
     }
 }
