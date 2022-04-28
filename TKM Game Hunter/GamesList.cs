@@ -223,6 +223,7 @@ namespace TKM_Game_Hunter
         private void GamesList_FormClosed(object sender, FormClosedEventArgs e)
         {
             HP.Show();
+            HP.HPRefresh();
         }
 
         private void txtbx_title_TextChanged(object sender, EventArgs e)

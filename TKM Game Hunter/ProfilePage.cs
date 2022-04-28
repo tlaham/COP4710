@@ -68,12 +68,12 @@ namespace TKM_Game_Hunter
         private void but_home_Click(object sender, EventArgs e)
         {
             this.Close();
-            HP.Refresh();
+            HP.HPRefresh();
         }
 
         private void ProfilePage_FormClosed(object sender, FormClosedEventArgs e)
         {
-            HP.Refresh();
+            HP.HPRefresh();
         }
     }
 }
