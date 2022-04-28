@@ -196,6 +196,7 @@
   <ItemGroup>
     <Content Include="Resources\Ghost_of_Tsushima_cover.jpg" />
     <Content Include="Resources\Lego_Star_Wars_The_Skywalker_Saga.jpg" />
+    <Content Include="Resources\MarioOdyssey.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

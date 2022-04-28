@@ -44,6 +44,7 @@ namespace TKM_Game_Hunter
         {
             if(e.RowIndex >= 0)
             {
+                LockInputs();
                 rowindex = e.RowIndex;
                 txtbx_title.Text = dgv_games.Rows[e.RowIndex].Cells["game_name"].Value.ToString();
                 txtbx_genre.Text = dgv_games.Rows[e.RowIndex].Cells["genre"].Value.ToString();
@@ -62,8 +63,21 @@ namespace TKM_Game_Hunter
             }
         }
 
+        private void LockInputs()
+        {
+            txtbx_title.ReadOnly = txtbx_genre.ReadOnly = txtbx_platform.ReadOnly = txtbx_price.ReadOnly = txtbx_company.ReadOnly = true;
+            but_browse.Enabled = false;
+        }
+
+        private void UnlockInputs()
+        {
+            txtbx_title.ReadOnly = txtbx_genre.ReadOnly = txtbx_platform.ReadOnly = txtbx_price.ReadOnly = txtbx_company.ReadOnly = false;
+            but_browse.Enabled = true;
+        }
+
         private void but_insert_Click(object sender, EventArgs e)
         {
+            UnlockInputs();
             rowindex = -1;
             txtbx_title.Text = txtbx_genre.Text = txtbx_platform.Text = txtbx_company.Text = txtbx_price.Text = null;
             pbx_splash.BackgroundImage = null;
@@ -77,6 +91,10 @@ namespace TKM_Game_Hunter
                 MessageBox.Show("Please Choose a game to update", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            else
+            {
+                UnlockInputs();
+            }
         }
 
         private void but_delete_Click(object sender, EventArgs e)
@@ -89,8 +107,8 @@ namespace TKM_Game_Hunter
             try
             {
                 conn.Open();
-                int id2remove = int.Parse(dgv_games.Rows[rowindex].Cells["game_id"].Value.ToString());
-                cmd = new NpgsqlCommand($"delete from game where game_id={id2remove}", conn);
+                int id2Remove = int.Parse(dgv_games.Rows[rowindex].Cells["game_id"].Value.ToString());
+                cmd = new NpgsqlCommand($"delete from game where game_id={id2Remove}", conn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Deleted Game Successfully");
                 rowindex = -1;
@@ -106,7 +124,7 @@ namespace TKM_Game_Hunter
 
         private void but_save_Click(object sender, EventArgs e)
         {
-           if(rowindex==-1)
+           if(rowindex<0)
             {
                 try
                 {
@@ -122,6 +140,29 @@ namespace TKM_Game_Hunter
                 {
                     conn.Close();
                     MessageBox.Show($"Insertion Failed Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+           else
+            {
+                try
+                {
+                    if(imgPath==String.Empty)
+                    {
+                        imgPath = dgv_games.Rows[rowindex].Cells["splashart"].Value.ToString();
+                    }
+                    conn.Open();
+                    cmd = new NpgsqlCommand($"UPDATE game SET game_name = '{txtbx_title.Text}', genre = '{txtbx_genre.Text}', price = '{txtbx_price.Text}'," +
+                        $"company = '{txtbx_company.Text}', platform = '{txtbx_platform.Text}', splashart = '{imgPath}' where " +
+                        $"game_id = {dgv_games.Rows[rowindex].Cells["game_id"].Value.ToString()}", conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Game Updated Successfully");
+                    conn.Close();
+                    Select();
+                }
+                catch (Exception ex)
+                {
+                    conn.Close();
+                    MessageBox.Show($"Game Update Failed Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
