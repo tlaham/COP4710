@@ -17,9 +17,11 @@ namespace TKM_Game_Hunter
         NpgsqlConnection conn;
         NpgsqlCommand cmd;
         string username;
-        public ProfilePage(string username)
+        private HomePage HP;
+        public ProfilePage(string username, HomePage HP)
         {
             InitializeComponent();
+            this.HP = HP;
             this.username = username;
             lbl_user.Text = $"Username: {GetInfo(username, ACC_Col.username)}";
             lbl_age.Text = $"Age: {GetInfo(username, ACC_Col.age)}";
@@ -55,6 +57,24 @@ namespace TKM_Game_Hunter
                 conn.Close();
                 pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             }
+        }
+
+        private void ProfilePage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void but_home_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            HP.Refresh();
+            HP.Show();
+        }
+
+        private void ProfilePage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            HP.Refresh();
+            HP.Show();
         }
     }
 }

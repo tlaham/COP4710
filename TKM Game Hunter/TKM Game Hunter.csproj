@@ -130,12 +130,6 @@
     <Compile Include="ProfilePage.Designer.cs">
       <DependentUpon>ProfilePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="WriteReviewPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WriteReviewPage.Designer.cs">
-      <DependentUpon>WriteReviewPage.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="CreateAccountPage.resx">
       <DependentUpon>CreateAccountPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,9 +157,6 @@
     </Compile>
     <EmbeddedResource Include="ProfilePage.resx">
       <DependentUpon>ProfilePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WriteReviewPage.resx">
-      <DependentUpon>WriteReviewPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -203,8 +194,9 @@
     <None Include="Resources\star.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Ghost_of_Tsushima_cover.jpg" />
     <Content Include="Resources\Lego_Star_Wars_The_Skywalker_Saga.jpg" />
-    <None Include="Resources\star %281%29.png" />
+    <Content Include="Resources\MarioOdyssey.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

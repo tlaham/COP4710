@@ -152,6 +152,7 @@ namespace TKM_Game_Hunter
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginPage";
             this.Text = "Login Page";
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
