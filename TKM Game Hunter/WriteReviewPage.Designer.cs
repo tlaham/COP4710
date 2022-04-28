@@ -29,10 +29,8 @@ namespace TKM_Game_Hunter
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_home = new System.Windows.Forms.Label();
-            this.picbx_profile = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WriteReviewPage));
             this.btn_review = new System.Windows.Forms.Button();
-            this.lbl_game = new System.Windows.Forms.Label();
             this.pic_star5 = new System.Windows.Forms.PictureBox();
             this.pic_star4 = new System.Windows.Forms.PictureBox();
             this.pic_star3 = new System.Windows.Forms.PictureBox();
@@ -40,37 +38,12 @@ namespace TKM_Game_Hunter
             this.pic_star1 = new System.Windows.Forms.PictureBox();
             this.lbl_review = new System.Windows.Forms.Label();
             this.txtbx_review = new System.Windows.Forms.RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picbx_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_star5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_star4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_star3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_star2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_star1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbl_home
-            // 
-            this.lbl_home.AutoSize = true;
-            this.lbl_home.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
-            this.lbl_home.Location = new System.Drawing.Point(32, 21);
-            this.lbl_home.Name = "lbl_home";
-            this.lbl_home.Size = new System.Drawing.Size(160, 22);
-            this.lbl_home.TabIndex = 11;
-            this.lbl_home.Text = "TKM Game Hunter";
-            this.lbl_home.Click += new System.EventHandler(this.lbl_home_Click);
-            // 
-            // picbx_profile
-            // 
-            this.picbx_profile.BackColor = System.Drawing.Color.Transparent;
-            this.picbx_profile.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.account__2_;
-            this.picbx_profile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picbx_profile.Image = global::TKM_Game_Hunter.Properties.Resources.account;
-            this.picbx_profile.Location = new System.Drawing.Point(802, 21);
-            this.picbx_profile.Name = "picbx_profile";
-            this.picbx_profile.Size = new System.Drawing.Size(39, 38);
-            this.picbx_profile.TabIndex = 10;
-            this.picbx_profile.TabStop = false;
             // 
             // btn_review
             // 
@@ -85,23 +58,12 @@ namespace TKM_Game_Hunter
             this.btn_review.UseVisualStyleBackColor = true;
             this.btn_review.Click += new System.EventHandler(this.btn_review_Click);
             // 
-            // lbl_game
-            // 
-            this.lbl_game.AutoSize = true;
-            this.lbl_game.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_game.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lbl_game.Location = new System.Drawing.Point(43, 121);
-            this.lbl_game.Name = "lbl_game";
-            this.lbl_game.Size = new System.Drawing.Size(122, 25);
-            this.lbl_game.TabIndex = 21;
-            this.lbl_game.Text = "Game Name";
-            // 
             // pic_star5
             // 
             this.pic_star5.BackColor = System.Drawing.Color.Transparent;
             this.pic_star5.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.star;
             this.pic_star5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic_star5.Location = new System.Drawing.Point(541, 121);
+            this.pic_star5.Location = new System.Drawing.Point(509, 114);
             this.pic_star5.Name = "pic_star5";
             this.pic_star5.Size = new System.Drawing.Size(39, 38);
             this.pic_star5.TabIndex = 20;
@@ -113,7 +75,7 @@ namespace TKM_Game_Hunter
             this.pic_star4.BackColor = System.Drawing.Color.Transparent;
             this.pic_star4.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.star;
             this.pic_star4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic_star4.Location = new System.Drawing.Point(481, 121);
+            this.pic_star4.Location = new System.Drawing.Point(449, 114);
             this.pic_star4.Name = "pic_star4";
             this.pic_star4.Size = new System.Drawing.Size(39, 38);
             this.pic_star4.TabIndex = 19;
@@ -125,7 +87,7 @@ namespace TKM_Game_Hunter
             this.pic_star3.BackColor = System.Drawing.Color.Transparent;
             this.pic_star3.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.star;
             this.pic_star3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic_star3.Location = new System.Drawing.Point(421, 121);
+            this.pic_star3.Location = new System.Drawing.Point(389, 114);
             this.pic_star3.Name = "pic_star3";
             this.pic_star3.Size = new System.Drawing.Size(39, 38);
             this.pic_star3.TabIndex = 18;
@@ -137,7 +99,7 @@ namespace TKM_Game_Hunter
             this.pic_star2.BackColor = System.Drawing.Color.Transparent;
             this.pic_star2.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.star;
             this.pic_star2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic_star2.Location = new System.Drawing.Point(362, 121);
+            this.pic_star2.Location = new System.Drawing.Point(330, 114);
             this.pic_star2.Name = "pic_star2";
             this.pic_star2.Size = new System.Drawing.Size(39, 38);
             this.pic_star2.TabIndex = 17;
@@ -149,7 +111,7 @@ namespace TKM_Game_Hunter
             this.pic_star1.BackColor = System.Drawing.Color.Transparent;
             this.pic_star1.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.star;
             this.pic_star1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic_star1.Location = new System.Drawing.Point(302, 121);
+            this.pic_star1.Location = new System.Drawing.Point(270, 114);
             this.pic_star1.Name = "pic_star1";
             this.pic_star1.Size = new System.Drawing.Size(39, 38);
             this.pic_star1.TabIndex = 16;
@@ -162,11 +124,8 @@ namespace TKM_Game_Hunter
             this.lbl_review.BackColor = System.Drawing.Color.Transparent;
             this.lbl_review.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_review.Location = new System.Drawing.Point(264, 9);
-            this.lbl_review.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lbl_review.Location = new System.Drawing.Point(358, 21);
             this.lbl_review.Name = "lbl_review";
             this.lbl_review.Size = new System.Drawing.Size(229, 33);
-            this.lbl_review.Size = new System.Drawing.Size(140, 24);
             this.lbl_review.TabIndex = 23;
             this.lbl_review.Text = "Your Review of: ";
             // 
