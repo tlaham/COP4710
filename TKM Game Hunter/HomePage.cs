@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static TKM_Game_Hunter.Resources;
 
 namespace TKM_Game_Hunter
 {
@@ -19,6 +20,29 @@ namespace TKM_Game_Hunter
             this.username = username;
             lbl_welcome.Text = $"Welcome {username}";
             tooltip_profile.SetToolTip(profilepic, "Click to access profile");
+            try
+            {
+                profilepic.BackgroundImage = Image.FromFile(GetInfo(username, ACC_Col.profilepic));
+                profilepic.BackgroundImageLayout = ImageLayout.Stretch;
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        public void Refresh()
+        {
+            lbl_welcome.Text = "Happy Game Hunting!";
+            try
+            {
+                profilepic.BackgroundImage = Image.FromFile(GetInfo(username, ACC_Col.profilepic));
+                profilepic.BackgroundImageLayout = ImageLayout.Stretch;
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void txtbx_review1_TextChanged(object sender, EventArgs e)
@@ -48,16 +72,29 @@ namespace TKM_Game_Hunter
 
         private void profilepic_Click(object sender, EventArgs e)
         {
-            ProfilePage PP = new ProfilePage(username);
+            ProfilePage PP = new ProfilePage(username, this);
             PP.Show();
             this.Hide();
         }
 
         private void btn_editgames_Click(object sender, EventArgs e)
         {
-            GamesList GL = new GamesList();
+            GamesList GL = new GamesList(this);
             GL.Show();
             this.Hide();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Application.Restart();
+                Environment.Exit(0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }

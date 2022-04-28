@@ -18,9 +18,12 @@ namespace TKM_Game_Hunter
         private NpgsqlCommand cmd;
         private int rowindex = -1;
         private string imgPath = string.Empty;
-        public GamesList()
+        private HomePage HP;
+        
+        public GamesList(HomePage HP)
         {
             InitializeComponent();
+            this.HP = HP;
         }
 
         private void GamesList_Load(object sender, EventArgs e)
@@ -177,6 +180,17 @@ namespace TKM_Game_Hunter
                 pbx_splash.BackgroundImage = new Bitmap(openFileDialog.FileName);
                 pbx_splash.BackgroundImageLayout = ImageLayout.Stretch;
             }
+        }
+
+        private void but_home_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            HP.Show();
+        }
+
+        private void GamesList_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            HP.Show();
         }
     }
 }

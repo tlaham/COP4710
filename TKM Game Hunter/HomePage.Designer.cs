@@ -57,6 +57,7 @@ namespace TKM_Game_Hunter
             this.lbl_welcome = new System.Windows.Forms.Label();
             this.tooltip_profile = new System.Windows.Forms.ToolTip(this.components);
             this.btn_editgames = new System.Windows.Forms.Button();
+            this.btn_logout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -337,6 +338,16 @@ namespace TKM_Game_Hunter
             this.btn_editgames.UseVisualStyleBackColor = true;
             this.btn_editgames.Click += new System.EventHandler(this.btn_editgames_Click);
             // 
+            // btn_logout
+            // 
+            this.btn_logout.Location = new System.Drawing.Point(690, 19);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(51, 23);
+            this.btn_logout.TabIndex = 36;
+            this.btn_logout.Text = "LogOut";
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,6 +355,7 @@ namespace TKM_Game_Hunter
             this.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.VecteezyWhite_Background_02RD0421_rev_01_generated;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_editgames);
             this.Controls.Add(this.lbl_welcome);
             this.Controls.Add(this.txtbx_review4);
@@ -409,5 +421,6 @@ namespace TKM_Game_Hunter
         private System.Windows.Forms.Label lbl_welcome;
         private System.Windows.Forms.ToolTip tooltip_profile;
         private System.Windows.Forms.Button btn_editgames;
+        private System.Windows.Forms.Button btn_logout;
     }
 }

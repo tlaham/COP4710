@@ -39,7 +39,7 @@ namespace TKM_Game_Hunter
         {
             conn = new NpgsqlConnection(Resources.CONSTRING);
             conn.Open();
-            cmd = new NpgsqlCommand($"select username from account where username='{txtbx_username.Text}' or password='{txtbx_password.Text}'", conn);
+            cmd = new NpgsqlCommand($"select username from account where username='{txtbx_username.Text}' and password='{txtbx_password.Text}'", conn);
             reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
@@ -73,6 +73,11 @@ namespace TKM_Game_Hunter
         private void pswdvis_check_CheckedChanged(object sender, EventArgs e)
         {
             txtbx_password.UseSystemPasswordChar = !(txtbx_password.UseSystemPasswordChar);
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,12 +29,14 @@ namespace TKM_Game_Hunter
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfilePage));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_user = new System.Windows.Forms.Label();
             this.lbl_email = new System.Windows.Forms.Label();
             this.lbl_age = new System.Windows.Forms.Label();
             this.lbl_utype = new System.Windows.Forms.Label();
             this.but_ppic = new System.Windows.Forms.Button();
+            this.but_home = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,11 +103,24 @@ namespace TKM_Game_Hunter
             this.but_ppic.UseVisualStyleBackColor = true;
             this.but_ppic.Click += new System.EventHandler(this.but_ppic_Click);
             // 
+            // but_home
+            // 
+            this.but_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("but_home.BackgroundImage")));
+            this.but_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.but_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_home.Location = new System.Drawing.Point(12, 12);
+            this.but_home.Name = "but_home";
+            this.but_home.Size = new System.Drawing.Size(40, 40);
+            this.but_home.TabIndex = 20;
+            this.but_home.UseVisualStyleBackColor = true;
+            this.but_home.Click += new System.EventHandler(this.but_home_Click);
+            // 
             // ProfilePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.but_home);
             this.Controls.Add(this.but_ppic);
             this.Controls.Add(this.lbl_utype);
             this.Controls.Add(this.lbl_age);
@@ -114,6 +129,8 @@ namespace TKM_Game_Hunter
             this.Controls.Add(this.pictureBox1);
             this.Name = "ProfilePage";
             this.Text = "ProfilePage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProfilePage_FormClosed);
+            this.Load += new System.EventHandler(this.ProfilePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -128,5 +145,6 @@ namespace TKM_Game_Hunter
         private System.Windows.Forms.Label lbl_age;
         private System.Windows.Forms.Label lbl_utype;
         private System.Windows.Forms.Button but_ppic;
+        private System.Windows.Forms.Button but_home;
     }
 }
