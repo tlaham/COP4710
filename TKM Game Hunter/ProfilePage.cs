@@ -68,13 +68,11 @@ namespace TKM_Game_Hunter
         {
             this.Close();
             HP.Refresh();
-            HP.Show();
         }
 
         private void ProfilePage_FormClosed(object sender, FormClosedEventArgs e)
         {
             HP.Refresh();
-            HP.Show();
         }
     }
 }

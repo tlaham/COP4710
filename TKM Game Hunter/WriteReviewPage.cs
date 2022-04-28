@@ -13,29 +13,33 @@ namespace TKM_Game_Hunter
 {
     public partial class WriteReviewPage : Form
     {
-        int rating;
+        int rating=0;
         string username;
         int gameid;
 
         NpgsqlConnection conn, conn2;
         NpgsqlCommand cmd;
-        NpgsqlDataReader reader;
         public WriteReviewPage(string username, int gameid)
         {
             InitializeComponent();
             this.username = username;
             this.gameid = gameid;
-        }
-        private void WriteReviewPage_Load(object sender, EventArgs e)
-        {
             conn2 = new NpgsqlConnection(Resources.CONSTRING);
             conn2.Open();
             cmd = new NpgsqlCommand($"select game_name from game where game_id ='{gameid}' ", conn2);
             NpgsqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                lbl_game.Text = Convert.ToString(dr["game_name"]);
+                this.Text = $"{Convert.ToString(dr["game_name"])} Review Page";
+                lbl_review.Text = $"Your Review of ({Convert.ToString(dr["game_name"])})";
             }
+            else
+            {
+                MessageBox.Show("Issue");
+            }
+        }
+        private void WriteReviewPage_Load(object sender, EventArgs e)
+        {
         }
         private void pic_star1_Click(object sender, EventArgs e)
         {
@@ -68,22 +72,22 @@ namespace TKM_Game_Hunter
         }
         private void btn_review_Click(object sender, EventArgs e)
         {
-            string comment = txtbx_review.Text;
-            conn = new NpgsqlConnection(Resources.CONSTRING);
-            conn.Open();
-            cmd = new NpgsqlCommand($"insert into Review (username, game_id, rating, description) values ('{username}','{gameid}','{rating}','{comment}')", conn);
-            cmd.ExecuteNonQueryAsync();
+            if (rating > 0)
+            {
+                string comment = txtbx_review.Text;
+                conn = new NpgsqlConnection(Resources.CONSTRING);
+                conn.Open();
+                cmd = new NpgsqlCommand($"insert into Review (username, game_id, rating, description) values ('{username}','{gameid}','{rating}','{comment}')", conn);
+                cmd.ExecuteNonQueryAsync();
 
-            this.Hide();
-            GamePage gp = new GamePage(gameid, username);
-            gp.Show();
-        }
-
-        private void lbl_home_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            HomePage hp = new HomePage(username);
-            hp.Show();
+                this.Hide();
+                GamePage gp = new GamePage(gameid, username);
+                gp.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please Choose a Rating by clicking on the Stars(1-5)","Alert",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
         }
 
         public void change_stars(int rating)

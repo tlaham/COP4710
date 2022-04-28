@@ -20,7 +20,7 @@ namespace TKM_Game_Hunter
             profilepic
         }
 
-        public const string CONSTRING = "Server=localhost;Port=5432;Database=cop4710;User Id=postgres;Password=Sloove0322";
+        public const string CONSTRING = "Server=localhost;Port=5432;Database=cop4710;User Id=postgres;Password=spring99";
         public const string GETAGE = "update account set age=(select extract(year from age(dob)) from account)";
 
         public static string GetInfo(string username, ACC_Col colName)

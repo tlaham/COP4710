@@ -19,20 +19,42 @@ namespace TKM_Game_Hunter
         private int rowindex = -1;
         private string imgPath = string.Empty;
         private HomePage HP;
+        private string username;
         
-        public GamesList(HomePage HP)
+        public GamesList(HomePage HP, string username)
         {
             InitializeComponent();
+            this.username = username;
+            if(GetInfo(username,ACC_Col.u_type)=="Admin")
+            {
+                but_browse.Visible = true;
+                but_delete.Visible = true;
+                but_update.Visible = true;
+                but_insert.Visible = true;
+                but_save.Visible = true;
+                but_rev.Visible = true;
+                lbl_splashart.Visible = true;
+            }
+            else
+            {
+                but_browse.Visible = false;
+                but_delete.Visible = false;
+                but_update.Visible=false;
+                but_insert.Visible=false;
+                but_save.Visible = false;
+                but_rev.Visible = true;
+                lbl_splashart.Visible = false;
+            }
             this.HP = HP;
         }
 
         private void GamesList_Load(object sender, EventArgs e)
         {
             conn = new NpgsqlConnection(CONSTRING);
-            this.Select();
+            this.RefreshTable();
         }
 
-        private void Select()
+        private void RefreshTable()
         {
             conn.Open();
             cmd = new NpgsqlCommand("select * from game", conn);
@@ -41,6 +63,8 @@ namespace TKM_Game_Hunter
             conn.Close();
             dgv_games.DataSource = null;
             dgv_games.DataSource = dt;
+            DataGridViewCellEventArgs e = new DataGridViewCellEventArgs(0, 0);
+            dgv_games_CellClick(dt,e);
         }
 
         private void dgv_games_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -49,6 +73,7 @@ namespace TKM_Game_Hunter
             {
                 LockInputs();
                 rowindex = e.RowIndex;
+                but_rev.Text = $"Review: {dgv_games.Rows[e.RowIndex].Cells["game_name"].Value.ToString()}";
                 txtbx_title.Text = dgv_games.Rows[e.RowIndex].Cells["game_name"].Value.ToString();
                 txtbx_genre.Text = dgv_games.Rows[e.RowIndex].Cells["genre"].Value.ToString();
                 txtbx_platform.Text = dgv_games.Rows[e.RowIndex].Cells["platform"].Value.ToString();
@@ -56,8 +81,15 @@ namespace TKM_Game_Hunter
                 txtbx_company.Text = dgv_games.Rows[e.RowIndex].Cells["company"].Value.ToString();
                 if (dgv_games.Rows[e.RowIndex].Cells["splashart"].Value.ToString()!=string.Empty)
                 {
-                    pbx_splash.BackgroundImage = Image.FromFile(dgv_games.Rows[e.RowIndex].Cells["splashart"].Value.ToString());
-                    pbx_splash.BackgroundImageLayout = ImageLayout.Stretch;
+                    try
+                    {
+                        pbx_splash.BackgroundImage = Image.FromFile(dgv_games.Rows[e.RowIndex].Cells["splashart"].Value.ToString());
+                        pbx_splash.BackgroundImageLayout = ImageLayout.Stretch;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
@@ -116,7 +148,7 @@ namespace TKM_Game_Hunter
                 MessageBox.Show("Deleted Game Successfully");
                 rowindex = -1;
                 conn.Close();
-                Select();
+                RefreshTable();
             }
             catch (Exception ex)
             {
@@ -137,7 +169,7 @@ namespace TKM_Game_Hunter
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Game Added Successfully");
                     conn.Close();
-                    Select();
+                    RefreshTable();
                 }
                 catch (Exception ex)
                 {
@@ -160,7 +192,7 @@ namespace TKM_Game_Hunter
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Game Updated Successfully");
                     conn.Close();
-                    Select();
+                    RefreshTable();
                 }
                 catch (Exception ex)
                 {
@@ -196,6 +228,12 @@ namespace TKM_Game_Hunter
         private void txtbx_title_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void but_rev_Click(object sender, EventArgs e)
+        {
+            GamePage GP = new GamePage(Convert.ToInt32(dgv_games.Rows[rowindex].Cells["game_id"].Value.ToString()), username);
+            GP.Show();
         }
     }
 }

@@ -119,6 +119,7 @@ namespace TKM_Game_Hunter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.VecteezyWhite_Background_02RD0421_rev_01_generated;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.but_home);
             this.Controls.Add(this.but_ppic);
@@ -127,7 +128,9 @@ namespace TKM_Game_Hunter
             this.Controls.Add(this.lbl_email);
             this.Controls.Add(this.lbl_user);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProfilePage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProfilePage";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProfilePage_FormClosed);
             this.Load += new System.EventHandler(this.ProfilePage_Load);

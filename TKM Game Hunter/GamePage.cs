@@ -34,14 +34,26 @@ namespace TKM_Game_Hunter
 
             conn = new NpgsqlConnection(Resources.CONSTRING);
             conn.Open();
-            cmd = new NpgsqlCommand($"select game_name, price, platform, genre from game where game_id ='{gameid}' ", conn);
+            cmd = new NpgsqlCommand($"select game_name, price, platform, genre, company, splashart from game where game_id ='{gameid}' ", conn);
             NpgsqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
+                this.Text = $"{Convert.ToString(dr["game_name"])} Details Page";
                 lbl_game.Text = Convert.ToString(dr["game_name"]);
-                lbl_price.Text = Convert.ToString(dr["price"]);
-                lbl_platform.Text = Convert.ToString(dr["platform"]);
-                lbl_genre.Text = Convert.ToString(dr["genre"]);
+                lbl_price.Text = $"Price: ${Convert.ToString(dr["price"])}";
+                lbl_platform.Text = $"Platform: {Convert.ToString(dr["platform"])}";
+                lbl_genre.Text = $"Genre:{Convert.ToString(dr["genre"])}";
+                lbl_company.Text = $"Company: {Convert.ToString(dr["company"])}";
+                try
+                {
+                    pbx_splash.BackgroundImage = Image.FromFile(Convert.ToString(dr["splashart"]));
+                    pbx_splash.BackgroundImageLayout = ImageLayout.Stretch;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    pbx_splash = null;
+                }
 
                 conn2 = new NpgsqlConnection(Resources.CONSTRING);
                 conn2.Open();
@@ -49,9 +61,17 @@ namespace TKM_Game_Hunter
                 NpgsqlDataReader dr2 = cmd.ExecuteReader();
                 if(dr2.Read())
                 {
-                    double rating = dr2.GetDouble(0);
-                    int rate = Convert.ToInt32(rating);
-                    change_stars(rate);
+                    try
+                    {
+                        double rating = dr2.GetDouble(0);
+                        int rate = Convert.ToInt32(rating);
+                        change_stars(rate);
+                    }
+                    catch
+                    {
+                        int rate = 0;
+                        change_stars(rate);
+                    }
                 }
 
                 conn3 = new NpgsqlConnection(Resources.CONSTRING);
@@ -79,27 +99,12 @@ namespace TKM_Game_Hunter
             }
 
         }
-        private void lbl_home_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            HomePage hp = new HomePage(username);
-            hp.ShowDialog();
-            this.Close();
-        }
 
-
-        private void picbx_profile_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            //ProfilePage pp = new ProfilePage(username);
-            //pp.ShowDialog();
-            this.Close();
-        }
         private void btn_review_Click(object sender, EventArgs e)
         {
-            this.Hide();
             WriteReviewPage review = new WriteReviewPage(username, gameid);
             review.Show();
+            this.Close();
         }
         public void change_stars(int rating)
         {
@@ -185,6 +190,11 @@ namespace TKM_Game_Hunter
         }
 
         private void pic_star3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GamePage_Load_1(object sender, EventArgs e)
         {
 
         }

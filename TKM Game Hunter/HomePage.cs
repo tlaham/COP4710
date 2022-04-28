@@ -74,12 +74,11 @@ namespace TKM_Game_Hunter
         {
             ProfilePage PP = new ProfilePage(username, this);
             PP.Show();
-            this.Hide();
         }
 
         private void btn_editgames_Click(object sender, EventArgs e)
         {
-            GamesList GL = new GamesList(this);
+            GamesList GL = new GamesList(this, username);
             GL.Show();
             this.Hide();
         }

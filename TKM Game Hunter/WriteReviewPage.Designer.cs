@@ -29,10 +29,8 @@ namespace TKM_Game_Hunter
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_home = new System.Windows.Forms.Label();
-            this.picbx_profile = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WriteReviewPage));
             this.btn_review = new System.Windows.Forms.Button();
-            this.lbl_game = new System.Windows.Forms.Label();
             this.pic_star5 = new System.Windows.Forms.PictureBox();
             this.pic_star4 = new System.Windows.Forms.PictureBox();
             this.pic_star3 = new System.Windows.Forms.PictureBox();
@@ -40,7 +38,6 @@ namespace TKM_Game_Hunter
             this.pic_star1 = new System.Windows.Forms.PictureBox();
             this.lbl_review = new System.Windows.Forms.Label();
             this.txtbx_review = new System.Windows.Forms.RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picbx_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_star5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_star4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_star3)).BeginInit();
@@ -48,51 +45,18 @@ namespace TKM_Game_Hunter
             ((System.ComponentModel.ISupportInitialize)(this.pic_star1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbl_home
-            // 
-            this.lbl_home.AutoSize = true;
-            this.lbl_home.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
-            this.lbl_home.Location = new System.Drawing.Point(32, 21);
-            this.lbl_home.Name = "lbl_home";
-            this.lbl_home.Size = new System.Drawing.Size(213, 29);
-            this.lbl_home.TabIndex = 11;
-            this.lbl_home.Text = "TKM Game Hunter";
-            this.lbl_home.Click += new System.EventHandler(this.lbl_home_Click);
-            // 
-            // picbx_profile
-            // 
-            this.picbx_profile.BackColor = System.Drawing.Color.Transparent;
-            this.picbx_profile.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.account__2_;
-            this.picbx_profile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picbx_profile.Image = global::TKM_Game_Hunter.Properties.Resources.account;
-            this.picbx_profile.Location = new System.Drawing.Point(802, 21);
-            this.picbx_profile.Name = "picbx_profile";
-            this.picbx_profile.Size = new System.Drawing.Size(39, 38);
-            this.picbx_profile.TabIndex = 10;
-            this.picbx_profile.TabStop = false;
-            // 
             // btn_review
             // 
+            this.btn_review.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.VecteezyWhite_Background_02RD0421_rev_01_generated;
+            this.btn_review.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_review.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btn_review.Location = new System.Drawing.Point(389, 371);
+            this.btn_review.Location = new System.Drawing.Point(349, 367);
             this.btn_review.Name = "btn_review";
             this.btn_review.Size = new System.Drawing.Size(119, 48);
             this.btn_review.TabIndex = 22;
-            this.btn_review.Text = "Write Review";
+            this.btn_review.Text = "Submit";
             this.btn_review.UseVisualStyleBackColor = true;
             this.btn_review.Click += new System.EventHandler(this.btn_review_Click);
-            // 
-            // lbl_game
-            // 
-            this.lbl_game.AutoSize = true;
-            this.lbl_game.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_game.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lbl_game.Location = new System.Drawing.Point(43, 121);
-            this.lbl_game.Name = "lbl_game";
-            this.lbl_game.Size = new System.Drawing.Size(157, 29);
-            this.lbl_game.TabIndex = 21;
-            this.lbl_game.Text = "Game Name";
             // 
             // pic_star5
             // 
@@ -157,15 +121,17 @@ namespace TKM_Game_Hunter
             // lbl_review
             // 
             this.lbl_review.AutoSize = true;
-            this.lbl_review.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lbl_review.Location = new System.Drawing.Point(328, 21);
+            this.lbl_review.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_review.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_review.Location = new System.Drawing.Point(264, 9);
             this.lbl_review.Name = "lbl_review";
-            this.lbl_review.Size = new System.Drawing.Size(180, 29);
+            this.lbl_review.Size = new System.Drawing.Size(229, 33);
             this.lbl_review.TabIndex = 23;
-            this.lbl_review.Text = "Write a Review!";
+            this.lbl_review.Text = "Your Review of: ";
             // 
             // txtbx_review
             // 
+            this.txtbx_review.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbx_review.Location = new System.Drawing.Point(39, 183);
             this.txtbx_review.Name = "txtbx_review";
             this.txtbx_review.Size = new System.Drawing.Size(802, 169);
@@ -181,17 +147,14 @@ namespace TKM_Game_Hunter
             this.Controls.Add(this.txtbx_review);
             this.Controls.Add(this.lbl_review);
             this.Controls.Add(this.btn_review);
-            this.Controls.Add(this.lbl_game);
             this.Controls.Add(this.pic_star5);
             this.Controls.Add(this.pic_star4);
             this.Controls.Add(this.pic_star3);
             this.Controls.Add(this.pic_star2);
             this.Controls.Add(this.pic_star1);
-            this.Controls.Add(this.lbl_home);
-            this.Controls.Add(this.picbx_profile);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WriteReviewPage";
             this.Text = "WriteReviewPage";
-            ((System.ComponentModel.ISupportInitialize)(this.picbx_profile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_star5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_star4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_star3)).EndInit();
@@ -203,11 +166,7 @@ namespace TKM_Game_Hunter
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbl_home;
-        private System.Windows.Forms.PictureBox picbx_profile;
         private System.Windows.Forms.Button btn_review;
-        private System.Windows.Forms.Label lbl_game;
         private System.Windows.Forms.PictureBox pic_star5;
         private System.Windows.Forms.PictureBox pic_star4;
         private System.Windows.Forms.PictureBox pic_star3;

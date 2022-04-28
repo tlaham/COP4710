@@ -30,6 +30,7 @@ namespace TKM_Game_Hunter
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.label1 = new System.Windows.Forms.Label();
             this.profilepic = new System.Windows.Forms.PictureBox();
             this.lbl_price1 = new System.Windows.Forms.Label();
@@ -65,27 +66,29 @@ namespace TKM_Game_Hunter
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
-            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 22);
+            this.label1.Size = new System.Drawing.Size(283, 31);
             this.label1.TabIndex = 9;
             this.label1.Text = "TKM Game Hunter";
             // 
             // profilepic
             // 
-            this.profilepic.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.account__2_;
-            this.profilepic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.profilepic.Image = global::TKM_Game_Hunter.Properties.Resources.account;
-            this.profilepic.Location = new System.Drawing.Point(747, 17);
+            this.profilepic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.profilepic.BackColor = System.Drawing.Color.White;
+            this.profilepic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("profilepic.BackgroundImage")));
+            this.profilepic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.profilepic.Location = new System.Drawing.Point(681, 8);
             this.profilepic.Name = "profilepic";
-            this.profilepic.Size = new System.Drawing.Size(39, 38);
+            this.profilepic.Size = new System.Drawing.Size(107, 99);
             this.profilepic.TabIndex = 8;
             this.profilepic.TabStop = false;
             this.profilepic.Click += new System.EventHandler(this.profilepic_Click);
             // 
             // lbl_price1
             // 
+            this.lbl_price1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_price1.AutoSize = true;
             this.lbl_price1.BackColor = System.Drawing.Color.Transparent;
             this.lbl_price1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -97,6 +100,7 @@ namespace TKM_Game_Hunter
             // 
             // lbl_game1
             // 
+            this.lbl_game1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_game1.AutoSize = true;
             this.lbl_game1.BackColor = System.Drawing.Color.Transparent;
             this.lbl_game1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -108,6 +112,7 @@ namespace TKM_Game_Hunter
             // 
             // lbl_price2
             // 
+            this.lbl_price2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_price2.AutoSize = true;
             this.lbl_price2.BackColor = System.Drawing.Color.Transparent;
             this.lbl_price2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -119,6 +124,7 @@ namespace TKM_Game_Hunter
             // 
             // lbl_game2
             // 
+            this.lbl_game2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_game2.AutoSize = true;
             this.lbl_game2.BackColor = System.Drawing.Color.Transparent;
             this.lbl_game2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -130,6 +136,7 @@ namespace TKM_Game_Hunter
             // 
             // lbl_price4
             // 
+            this.lbl_price4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_price4.AutoSize = true;
             this.lbl_price4.BackColor = System.Drawing.Color.Transparent;
             this.lbl_price4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -141,6 +148,7 @@ namespace TKM_Game_Hunter
             // 
             // lbl_game4
             // 
+            this.lbl_game4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_game4.AutoSize = true;
             this.lbl_game4.BackColor = System.Drawing.Color.Transparent;
             this.lbl_game4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -152,6 +160,7 @@ namespace TKM_Game_Hunter
             // 
             // lbl_price3
             // 
+            this.lbl_price3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_price3.AutoSize = true;
             this.lbl_price3.BackColor = System.Drawing.Color.Transparent;
             this.lbl_price3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -163,6 +172,7 @@ namespace TKM_Game_Hunter
             // 
             // lbl_game3
             // 
+            this.lbl_game3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_game3.AutoSize = true;
             this.lbl_game3.BackColor = System.Drawing.Color.Transparent;
             this.lbl_game3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -174,28 +184,31 @@ namespace TKM_Game_Hunter
             // 
             // lbl_popGames
             // 
+            this.lbl_popGames.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_popGames.AutoSize = true;
             this.lbl_popGames.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_popGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lbl_popGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_popGames.Location = new System.Drawing.Point(59, 82);
             this.lbl_popGames.Name = "lbl_popGames";
-            this.lbl_popGames.Size = new System.Drawing.Size(147, 25);
+            this.lbl_popGames.Size = new System.Drawing.Size(180, 25);
             this.lbl_popGames.TabIndex = 20;
-            this.lbl_popGames.Text = "Popular Games";
+            this.lbl_popGames.Text = "Popular Games:";
             // 
             // lbl_myReviews
             // 
+            this.lbl_myReviews.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_myReviews.AutoSize = true;
             this.lbl_myReviews.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_myReviews.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lbl_myReviews.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_myReviews.Location = new System.Drawing.Point(59, 250);
             this.lbl_myReviews.Name = "lbl_myReviews";
-            this.lbl_myReviews.Size = new System.Drawing.Size(117, 25);
+            this.lbl_myReviews.Size = new System.Drawing.Size(145, 25);
             this.lbl_myReviews.TabIndex = 21;
-            this.lbl_myReviews.Text = "My Reviews";
+            this.lbl_myReviews.Text = "My Reviews:";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -206,6 +219,7 @@ namespace TKM_Game_Hunter
             // 
             // lbl_game8
             // 
+            this.lbl_game8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_game8.AutoSize = true;
             this.lbl_game8.BackColor = System.Drawing.Color.Transparent;
             this.lbl_game8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -217,6 +231,7 @@ namespace TKM_Game_Hunter
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -227,6 +242,7 @@ namespace TKM_Game_Hunter
             // 
             // lbl_game7
             // 
+            this.lbl_game7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_game7.AutoSize = true;
             this.lbl_game7.BackColor = System.Drawing.Color.Transparent;
             this.lbl_game7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -238,6 +254,7 @@ namespace TKM_Game_Hunter
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -248,6 +265,7 @@ namespace TKM_Game_Hunter
             // 
             // lbl_game6
             // 
+            this.lbl_game6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_game6.AutoSize = true;
             this.lbl_game6.BackColor = System.Drawing.Color.Transparent;
             this.lbl_game6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -259,6 +277,7 @@ namespace TKM_Game_Hunter
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -269,6 +288,7 @@ namespace TKM_Game_Hunter
             // 
             // lbl_game5
             // 
+            this.lbl_game5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_game5.AutoSize = true;
             this.lbl_game5.BackColor = System.Drawing.Color.Transparent;
             this.lbl_game5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -280,6 +300,7 @@ namespace TKM_Game_Hunter
             // 
             // txtbx_review1
             // 
+            this.txtbx_review1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtbx_review1.Location = new System.Drawing.Point(81, 346);
             this.txtbx_review1.Name = "txtbx_review1";
             this.txtbx_review1.ReadOnly = true;
@@ -289,6 +310,7 @@ namespace TKM_Game_Hunter
             // 
             // txtbx_review2
             // 
+            this.txtbx_review2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtbx_review2.Location = new System.Drawing.Point(259, 346);
             this.txtbx_review2.Name = "txtbx_review2";
             this.txtbx_review2.ReadOnly = true;
@@ -297,6 +319,7 @@ namespace TKM_Game_Hunter
             // 
             // txtbx_review3
             // 
+            this.txtbx_review3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtbx_review3.Location = new System.Drawing.Point(440, 346);
             this.txtbx_review3.Name = "txtbx_review3";
             this.txtbx_review3.ReadOnly = true;
@@ -305,6 +328,7 @@ namespace TKM_Game_Hunter
             // 
             // txtbx_review4
             // 
+            this.txtbx_review4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtbx_review4.Location = new System.Drawing.Point(618, 346);
             this.txtbx_review4.Name = "txtbx_review4";
             this.txtbx_review4.ReadOnly = true;
@@ -313,12 +337,13 @@ namespace TKM_Game_Hunter
             // 
             // lbl_welcome
             // 
+            this.lbl_welcome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_welcome.AutoSize = true;
             this.lbl_welcome.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
-            this.lbl_welcome.Location = new System.Drawing.Point(277, 17);
+            this.lbl_welcome.Font = new System.Drawing.Font("Lucida Calligraphy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_welcome.Location = new System.Drawing.Point(292, 8);
             this.lbl_welcome.Name = "lbl_welcome";
-            this.lbl_welcome.Size = new System.Drawing.Size(134, 22);
+            this.lbl_welcome.Size = new System.Drawing.Size(196, 27);
             this.lbl_welcome.TabIndex = 33;
             this.lbl_welcome.Text = "Welcome Blank";
             this.lbl_welcome.Click += new System.EventHandler(this.lbl_welcome_Click);
@@ -329,31 +354,41 @@ namespace TKM_Game_Hunter
             // 
             // btn_editgames
             // 
-            this.btn_editgames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editgames.Location = new System.Drawing.Point(460, 17);
+            this.btn_editgames.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_editgames.BackColor = System.Drawing.Color.Transparent;
+            this.btn_editgames.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_editgames.BackgroundImage")));
+            this.btn_editgames.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_editgames.Font = new System.Drawing.Font("Lucida Calligraphy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editgames.ForeColor = System.Drawing.Color.Black;
+            this.btn_editgames.Location = new System.Drawing.Point(440, 62);
             this.btn_editgames.Name = "btn_editgames";
-            this.btn_editgames.Size = new System.Drawing.Size(75, 75);
+            this.btn_editgames.Size = new System.Drawing.Size(110, 36);
             this.btn_editgames.TabIndex = 34;
-            this.btn_editgames.Text = "Edit\r\nGames";
-            this.btn_editgames.UseVisualStyleBackColor = true;
+            this.btn_editgames.Text = "Games!\r\n";
+            this.btn_editgames.UseVisualStyleBackColor = false;
             this.btn_editgames.Click += new System.EventHandler(this.btn_editgames_Click);
             // 
             // btn_logout
             // 
-            this.btn_logout.Location = new System.Drawing.Point(690, 19);
+            this.btn_logout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_logout.BackColor = System.Drawing.Color.Transparent;
+            this.btn_logout.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.VecteezyWhite_Background_02RD0421_rev_01_generated;
+            this.btn_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.Location = new System.Drawing.Point(703, 113);
             this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(51, 23);
+            this.btn_logout.Size = new System.Drawing.Size(85, 37);
             this.btn_logout.TabIndex = 36;
             this.btn_logout.Text = "LogOut";
-            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.UseVisualStyleBackColor = false;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TKM_Game_Hunter.Properties.Resources.VecteezyWhite_Background_02RD0421_rev_01_generated;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_editgames);
@@ -382,8 +417,11 @@ namespace TKM_Game_Hunter
             this.Controls.Add(this.lbl_game1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.profilepic);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HomePage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomePage_FormClosed);
             this.Load += new System.EventHandler(this.HomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).EndInit();
