@@ -50,7 +50,7 @@ namespace TKM_Game_Hunter
 
         private void GamesList_Load(object sender, EventArgs e)
         {
-            conn = new NpgsqlConnection(CONSTRING);
+            conn = new NpgsqlConnection(CONNSTRING);
             this.RefreshTable();
         }
 
@@ -69,33 +69,37 @@ namespace TKM_Game_Hunter
 
         private void dgv_games_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0)
+            try
             {
-                LockInputs();
-                rowindex = e.RowIndex;
-                but_rev.Text = $"Review: {dgv_games.Rows[e.RowIndex].Cells["game_name"].Value.ToString()}";
-                txtbx_title.Text = dgv_games.Rows[e.RowIndex].Cells["game_name"].Value.ToString();
-                txtbx_genre.Text = dgv_games.Rows[e.RowIndex].Cells["genre"].Value.ToString();
-                txtbx_platform.Text = dgv_games.Rows[e.RowIndex].Cells["platform"].Value.ToString();
-                txtbx_price.Text = dgv_games.Rows[e.RowIndex].Cells["price"].Value.ToString();
-                txtbx_company.Text = dgv_games.Rows[e.RowIndex].Cells["company"].Value.ToString();
-                if (dgv_games.Rows[e.RowIndex].Cells["splashart"].Value.ToString()!=string.Empty)
+                if (e.RowIndex >= 0)
                 {
-                    try
+                    LockInputs();
+                    rowindex = e.RowIndex;
+                    but_rev.Text = $"Review: {dgv_games.Rows[e.RowIndex].Cells["game_name"].Value.ToString()}";
+                    txtbx_title.Text = dgv_games.Rows[e.RowIndex].Cells["game_name"].Value.ToString();
+                    txtbx_genre.Text = dgv_games.Rows[e.RowIndex].Cells["genre"].Value.ToString();
+                    txtbx_platform.Text = dgv_games.Rows[e.RowIndex].Cells["platform"].Value.ToString();
+                    txtbx_price.Text = dgv_games.Rows[e.RowIndex].Cells["price"].Value.ToString();
+                    txtbx_company.Text = dgv_games.Rows[e.RowIndex].Cells["company"].Value.ToString();
+                    if (dgv_games.Rows[e.RowIndex].Cells["splashart"].Value.ToString() != string.Empty)
                     {
-                        pbx_splash.BackgroundImage = Image.FromFile(dgv_games.Rows[e.RowIndex].Cells["splashart"].Value.ToString());
-                        pbx_splash.BackgroundImageLayout = ImageLayout.Stretch;
+                        try
+                        {
+                            pbx_splash.BackgroundImage = Image.FromFile(dgv_games.Rows[e.RowIndex].Cells["splashart"].Value.ToString());
+                            pbx_splash.BackgroundImageLayout = ImageLayout.Stretch;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        pbx_splash.BackgroundImage = null;
                     }
-                }
-                else
-                {
-                    pbx_splash.BackgroundImage = null;
                 }
             }
+            catch { }
         }
 
         private void LockInputs()

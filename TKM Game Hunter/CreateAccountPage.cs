@@ -67,8 +67,8 @@ namespace TKM_Game_Hunter
             }
             else
             {
-                conn = new NpgsqlConnection(Resources.CONSTRING);
-                conn2 = new NpgsqlConnection(Resources.CONSTRING);
+                conn = new NpgsqlConnection(Resources.CONNSTRING);
+                conn2 = new NpgsqlConnection(Resources.CONNSTRING);
                 conn.Open();
                 cmd = new NpgsqlCommand($"select * from account where username ='{txtbx_username.Text}' or password='{txtbx_password.Text}' ", conn);
                 reader = cmd.ExecuteReader();

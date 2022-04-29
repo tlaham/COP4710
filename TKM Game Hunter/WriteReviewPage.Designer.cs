@@ -120,6 +120,7 @@ namespace TKM_Game_Hunter
             // 
             // lbl_review
             // 
+            this.lbl_review.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_review.AutoSize = true;
             this.lbl_review.BackColor = System.Drawing.Color.Transparent;
             this.lbl_review.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

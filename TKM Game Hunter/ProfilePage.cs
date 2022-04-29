@@ -51,7 +51,7 @@ namespace TKM_Game_Hunter
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.BackgroundImage = new Bitmap(openFileDialog.FileName);
-                conn = new NpgsqlConnection(Resources.CONSTRING);
+                conn = new NpgsqlConnection(Resources.CONNSTRING);
                 conn.Open();
                 cmd = new NpgsqlCommand($"update account set profilepic='{openFileDialog.FileName}' where username='{username}'",conn);
                 cmd.ExecuteNonQuery();

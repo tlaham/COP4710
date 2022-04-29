@@ -22,7 +22,7 @@ namespace TKM_Game_Hunter
         public LoginPage()
         {
             InitializeComponent();
-
+           
         }
 
         private void txtbx_username_TextChanged(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace TKM_Game_Hunter
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            conn = new NpgsqlConnection(Resources.CONSTRING);
+            conn = new NpgsqlConnection(Resources.CONNSTRING);
             conn.Open();
             cmd = new NpgsqlCommand($"select username from account where username='{txtbx_username.Text}' and password='{txtbx_password.Text}'", conn);
             reader = cmd.ExecuteReader();
@@ -77,7 +77,16 @@ namespace TKM_Game_Hunter
 
         private void LoginPage_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                conn = new NpgsqlConnection(CONNSTRING);
+                conn.Open();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\nPlease fill in the CONNSTRING found in the Resources.cs file","Database Connection Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }

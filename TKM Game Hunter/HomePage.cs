@@ -38,7 +38,7 @@ namespace TKM_Game_Hunter
         {
             NpgsqlConnection conn, conn2, conn3;
             NpgsqlCommand cmd, cmd2, cmd3;
-            conn = new NpgsqlConnection(Resources.CONSTRING);
+            conn = new NpgsqlConnection(Resources.CONNSTRING);
             conn.Open();
             cmd = new NpgsqlCommand($"SELECT Game.game_name, Review.rating, Review.description FROM Game FULL OUTER JOIN Review ON Game.game_id = Review.game_id ORDER BY Review.review_id DESC LIMIT 1", conn);
             NpgsqlDataReader dr = cmd.ExecuteReader();
@@ -49,7 +49,7 @@ namespace TKM_Game_Hunter
                 txtbx_review1.Text = Convert.ToString(dr["description"]);
             }
 
-            conn2 = new NpgsqlConnection(Resources.CONSTRING);
+            conn2 = new NpgsqlConnection(Resources.CONNSTRING);
             conn2.Open();
             cmd2 = new NpgsqlCommand($"SELECT Game.game_name, Review.rating, Review.description FROM Game FULL OUTER JOIN Review ON Game.game_id = Review.game_id ORDER BY Review.review_id DESC LIMIT 1 OFFSET 1", conn2);
             dr = cmd2.ExecuteReader();
@@ -60,7 +60,7 @@ namespace TKM_Game_Hunter
                 txtbx_review2.Text = Convert.ToString(dr["description"]);
             }
 
-            conn3 = new NpgsqlConnection(Resources.CONSTRING);
+            conn3 = new NpgsqlConnection(Resources.CONNSTRING);
             conn3.Open();
             cmd3 = new NpgsqlCommand($"SELECT Game.game_name, Review.rating, Review.description FROM Game FULL OUTER JOIN Review ON Game.game_id = Review.game_id ORDER BY Review.review_id DESC LIMIT 1 OFFSET 2", conn3);
             dr = cmd3.ExecuteReader();
@@ -77,7 +77,7 @@ namespace TKM_Game_Hunter
             NpgsqlConnection conn;
             NpgsqlCommand cmd;
             List<string> list = new List<string>();
-            conn = new NpgsqlConnection(Resources.CONSTRING);
+            conn = new NpgsqlConnection(Resources.CONNSTRING);
             conn.Open();
             cmd = new NpgsqlCommand($"SELECT DISTINCT Game.game_name, AVG(Review.rating) " +
                  $"FROM Game INNER JOIN Review ON Game.game_id = Review.game_id " +
@@ -88,10 +88,16 @@ namespace TKM_Game_Hunter
             {
                 list.Add(Convert.ToString(dr["game_name"]));
             }
-            txtTopGame1.Text = list[0];
-            txtTopGame2.Text = list[1];
-            txtTopGame3.Text = list[2];
-            conn.Close();
+            try
+            {
+                txtTopGame1.Text = list[0];
+                txtTopGame2.Text = list[1];
+                txtTopGame3.Text = list[2];
+                conn.Close();
+            }
+            catch
+            {
+            }
         }
 
         public void HPRefresh()

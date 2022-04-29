@@ -20,13 +20,13 @@ namespace TKM_Game_Hunter
             profilepic
         }
 
-        public const string CONSTRING = "Server=localhost;Port=5432;Database=cop4710;User Id=postgres;Password=spring99";
+        public const string CONNSTRING = "Server=localhost;Port=5432;Database=(FILL IN);User Id=postgres;Password=(FILL IN)";
         public const string GETAGE = "update account set age=(select extract(year from age(dob)) from account)";
 
         public static string GetInfo(string username, ACC_Col colName)
         {
             object val = "NO VALUE SET";
-            NpgsqlConnection conn = new NpgsqlConnection(CONSTRING);
+            NpgsqlConnection conn = new NpgsqlConnection(CONNSTRING);
             conn.Open();
             NpgsqlCommand cmd = new NpgsqlCommand($"select {colName.ToString()} from account where username = '{username}'",conn);
             NpgsqlDataReader NDR;
@@ -48,7 +48,7 @@ namespace TKM_Game_Hunter
         }
         public static void CalcAge(string username)
         {
-            NpgsqlConnection conn = new NpgsqlConnection(CONSTRING);
+            NpgsqlConnection conn = new NpgsqlConnection(CONNSTRING);
             conn.Open();
             NpgsqlCommand cmd = new NpgsqlCommand($"update account set age = (select extract(year from age(dob)) from account where username='{username}')where username='{username}';", conn);
             cmd.ExecuteNonQueryAsync();
@@ -57,7 +57,7 @@ namespace TKM_Game_Hunter
 
         public static string CalcReviews(string username)
         {
-            NpgsqlConnection conn = new NpgsqlConnection(CONSTRING);
+            NpgsqlConnection conn = new NpgsqlConnection(CONNSTRING);
             conn.Open();
             NpgsqlCommand cmd = new NpgsqlCommand($"select count(*) from review where username = '{username}'",conn);
             NpgsqlDataReader NDR;

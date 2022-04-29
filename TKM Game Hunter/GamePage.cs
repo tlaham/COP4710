@@ -32,7 +32,7 @@ namespace TKM_Game_Hunter
             lv_reviews.Columns.Add("Rating", 100);
             lv_reviews.Columns.Add("Description", 300);
 
-            conn = new NpgsqlConnection(Resources.CONSTRING);
+            conn = new NpgsqlConnection(Resources.CONNSTRING);
             conn.Open();
             cmd = new NpgsqlCommand($"select game_name, price, platform, genre, company, splashart from game where game_id ='{gameid}' ", conn);
             NpgsqlDataReader dr = cmd.ExecuteReader();
@@ -55,7 +55,7 @@ namespace TKM_Game_Hunter
                     pbx_splash = null;
                 }
 
-                conn2 = new NpgsqlConnection(Resources.CONSTRING);
+                conn2 = new NpgsqlConnection(Resources.CONNSTRING);
                 conn2.Open();
                 cmd = new NpgsqlCommand($"select avg(rating) from review where game_id ='{gameid}' ", conn2);
                 NpgsqlDataReader dr2 = cmd.ExecuteReader();
@@ -74,7 +74,7 @@ namespace TKM_Game_Hunter
                     }
                 }
 
-                conn3 = new NpgsqlConnection(Resources.CONSTRING);
+                conn3 = new NpgsqlConnection(Resources.CONNSTRING);
                 conn3.Open();
                 cmd2 = new NpgsqlCommand($"select username, rating, description  from review where game_id ='{gameid}' ", conn3);
                 reader = cmd2.ExecuteReader();

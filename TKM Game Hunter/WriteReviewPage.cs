@@ -24,7 +24,7 @@ namespace TKM_Game_Hunter
             InitializeComponent();
             this.username = username;
             this.gameid = gameid;
-            conn2 = new NpgsqlConnection(Resources.CONSTRING);
+            conn2 = new NpgsqlConnection(Resources.CONNSTRING);
             conn2.Open();
             cmd = new NpgsqlCommand($"select game_name from game where game_id ='{gameid}' ", conn2);
             NpgsqlDataReader dr = cmd.ExecuteReader();
@@ -75,7 +75,7 @@ namespace TKM_Game_Hunter
             if (rating > 0)
             {
                 string comment = txtbx_review.Text;
-                conn = new NpgsqlConnection(Resources.CONSTRING);
+                conn = new NpgsqlConnection(Resources.CONNSTRING);
                 conn.Open();
                 cmd = new NpgsqlCommand($"insert into Review (username, game_id, rating, description) values ('{username}','{gameid}','{rating}','{comment}')", conn);
                 cmd.ExecuteNonQueryAsync();
