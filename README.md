@@ -44,4 +44,6 @@ Step 3: When you create an account be sure to make it an Admin account, you will
 
 Step 4: To help with testing out the customization features of our app there is a resources folder: (COP4710\TKM Game Hunter\Resources\) that contains some pictures for the profile page, and some splasharts for example games you could add.
 
-Step 5: This project is viewable on GitHub via the link: https://github.com/tlaham/COP4710
+Step 5: We utilized Npgsql as a reference in visual studio so that may need to be added if it does not carry over.
+
+Step 6: This project is viewable on GitHub via the link: https://github.com/tlaham/COP4710
