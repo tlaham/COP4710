@@ -1,0 +1,1 @@
+Server=localhost;Port=5432;Database=cop4710;User Id=postgres;Password=spring99

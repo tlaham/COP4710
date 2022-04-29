@@ -4,11 +4,13 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using Npgsql;
+using System.Windows.Forms;
 
 namespace TKM_Game_Hunter
 {
-    public static class Resources
+    public  class Resources
     {
         public enum ACC_Col{
             username,
@@ -20,9 +22,20 @@ namespace TKM_Game_Hunter
             profilepic
         }
 
-        public const string CONNSTRING = "Server=localhost;Port=5432;Database=(FILL IN);User Id=postgres;Password=(FILL IN)";
+        public static string CONNSTRING;
         public const string GETAGE = "update account set age=(select extract(year from age(dob)) from account)";
 
+        static Resources()
+        {
+            try
+            {
+                CONNSTRING = (File.ReadAllText(@"..\..\..\CONNSTRING.txt"));
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
         public static string GetInfo(string username, ACC_Col colName)
         {
             object val = "NO VALUE SET";
