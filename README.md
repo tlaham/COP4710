@@ -4,9 +4,9 @@ Final Project for Database Design
 
 To properly run our application a few steps need to be taken:
 
-Step 1: There is a single connection string called CONNSTRING, it is found in the Resources.cs file. The string will need to be filled out according to your local setup on psql.
-An example of ours is:
-"Server=localhost;Port=5432;Database=cop4710;User Id=postgres;Password=(FILL IN)"
+Step 1: Within the directory there is a file named "CONNSTRING.txt", an example is shown below with the database and password needing to be filled in. Be sure to fill it out correctly with your psql information other wise the application will not work.
+
+Server=localhost;Port=5432;Database=(FILLIN);User Id=postgres;Password=(FILL IN)
 
 Step 2: Within the database you filled out above you will need to create 3 tables. The sql code for this is displayed below (build in order):
 
